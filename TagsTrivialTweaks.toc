@@ -1,0 +1,45 @@
+## Interface: 110205
+## Title: |cffC69B6DTag's Trivial Tweaks|r
+## Author: Slackluster
+## IconTexture: Interface\AddOns\TagsTrivialTweaks\assets\ttt_icon.blp
+## Version: @project-version@
+## X-Curse-Project-ID:
+## X-Wago-ID:
+
+## SavedVariables: TagsTrivialTweaks_Settings
+## SavedVariablesPerCharacter:
+
+## Category: User Interface
+## Category-deDE: Benutzerinterface
+## Category-esES: Interfaz de usuario
+## Category-esMX: Interfaz de usuario
+## Category-frFR: Interface utilisateur
+## Category-itIT: Interfaccia utente
+## Category-koKR: 사용자 인터페이스
+## Category-ptBR: Interface do usuário
+## Category-ruRU: Интерфейс пользователя
+## Category-zhCN: 用户界面
+## Category-zhTW: 使用者介面
+
+libs\LibBattlePetTooltipLine\LibBattlePetTooltipLine.lua
+libs\LibEditMode\embed.xml
+Core.lua
+Database.lua
+Settings.lua
+modules\Backpack.lua
+modules\Fun.lua
+modules\OtherAddons.lua
+modules\Queue.lua
+modules\Remix.lua
+modules\Tooltip.lua
+locales\enUS.lua
+locales\deDE.lua
+locales\esES.lua
+locales\esMX.lua
+locales\frFR.lua
+locales\itIT.lua
+locales\koKR.lua
+locales\ptBR.lua
+locales\ruRU.lua
+locales\zhCN.lua
+locales\zhTW.lua
