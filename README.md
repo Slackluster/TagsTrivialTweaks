@@ -1,5 +1,5 @@
 # Tag's Trivial Tweaks
-A World of Warcraft addon. Download locations: [CurseForge](https://www.curseforge.com/wow/addons/tags-trivial-tweaks) | [Wago.io](https://addons.wago.io/addons/ttt)
+A World of Warcraft addon. Download locations: [CurseForge](https://www.curseforge.com/wow/addons/tags-trivial-tweaks) | [Wago](https://addons.wago.io/addons/ttt)
 
 # Description
 **Tag's Trivial Tweaks** turn tedious tasks tolerable.
