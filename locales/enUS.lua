@@ -14,7 +14,7 @@ L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/
 
 -- Edit Mode
 L.SCALE = 								"Scale"
-L.VISIBLE_OUT_COMBAT = 					"Visible Out of combat"
+L.VISIBLE_OUT_COMBAT = 					"Visible Out of Combat"
 
 -- Tooltip
 L.REGION =								"Region"	-- Preceded by an abbreviated region name such as "EU" or "US"
