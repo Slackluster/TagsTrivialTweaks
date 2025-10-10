@@ -188,8 +188,8 @@ function app.Remix()
 end
 
 app.Event:Register("UNIT_SPELLCAST_SUCCEEDED", function(unitTarget, castGUID, spellID)
-	if TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell and spellID == app.ArtifactSpell then
-		C_Timer.After(0.5, function()
+	if TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell then
+		C_Timer.After(0.1, function()
 			local startTime = C_Spell.GetSpellCooldown(app.ArtifactSpell).startTime
 			local duration = C_Spell.GetSpellCooldown(app.ArtifactSpell).duration
 			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
