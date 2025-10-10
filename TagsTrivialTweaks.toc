@@ -3,8 +3,8 @@
 ## Author: Slackluster
 ## IconTexture: Interface\AddOns\TagsTrivialTweaks\assets\ttt_icon.blp
 ## Version: @project-version@
-## X-Curse-Project-ID:
-## X-Wago-ID:
+## X-Curse-Project-ID: 498475
+## X-Wago-ID: x61zryK1
 
 ## SavedVariables: TagsTrivialTweaks_Settings
 ## SavedVariablesPerCharacter:
