@@ -61,15 +61,17 @@ function app.Remix()
 		LEM:AddFrame(app.ArtifactAbility, onPositionChanged, defaultPosition)
 
 		LEM:RegisterCallback("enter", function()
-			RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] show; show")
+			if not InCombatLockdown() then
+				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] show; show")
+			end
 		end)
 
 		LEM:RegisterCallback("exit", function()
-			if not app.ArtifactSpell then
+			if not app.ArtifactSpell and not InCombatLockdown() then
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] hide; hide")
-			elseif TagsTrivialTweaks_Settings.LEM[LEM:GetActiveLayoutName()].showAlways == false then
+			elseif TagsTrivialTweaks_Settings.LEM[LEM:GetActiveLayoutName()].showAlways == false and not InCombatLockdown() then
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] show; hide")
-			else
+			elseif not InCombatLockdown() then
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] show; show")
 			end
 		end)
@@ -151,9 +153,9 @@ function app.Remix()
 		end
 
 		if app.ArtifactSpell then
-			if LEM:GetActiveLayoutName() and TagsTrivialTweaks_Settings.LEM[LEM:GetActiveLayoutName()].showAlways == false then
+			if LEM:GetActiveLayoutName() and TagsTrivialTweaks_Settings.LEM[LEM:GetActiveLayoutName()].showAlways == false and not InCombatLockdown() then
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] show; hide")
-			else
+			elseif InCombatLockdown() then
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] show; show")
 			end
 
@@ -190,7 +192,7 @@ app.Event:Register("UNIT_SPELLCAST_SUCCEEDED", function(unitTarget, castGUID, sp
 		C_Timer.After(0.5, function()
 			local startTime = C_Spell.GetSpellCooldown(app.ArtifactSpell).startTime
 			local duration = C_Spell.GetSpellCooldown(app.ArtifactSpell).duration
-			app.ArtifactAbilityCooldown:SetCooldown(startTime, duration)
+			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
 		end)
 	end
 end)
