@@ -168,7 +168,8 @@ function app.RemixArtifactButton()
 
 				app.ArtifactAbility.Button:SetNormalTexture(C_Spell.GetSpellTexture(app.ArtifactSpell))
 				app.ArtifactAbility.Button:SetAttribute("type", "spell")
-				app.ArtifactAbility.Button:SetAttribute("spell1", app.ArtifactSpell)
+				local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
+				app.ArtifactAbility.Button:SetAttribute("spell1", spellName)
 
 				app.ArtifactAbility.Button:SetScript("OnEnter", function(self)
 					GameTooltip:SetOwner(UIParent, "ANCHOR_NONE")
@@ -198,10 +199,17 @@ end
 app.Event:Register("UNIT_SPELLCAST_SUCCEEDED", function(unitTarget, castGUID, spellID)
 	if unitTarget == "player" and TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell then
 		C_Timer.After(0.1, function()
-			local startTime = C_Spell.GetSpellCooldown(app.ArtifactSpell).startTime
-			local duration = C_Spell.GetSpellCooldown(app.ArtifactSpell).duration
+			local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
+			local startTime = C_Spell.GetSpellCooldown(spellName).startTime
+			local duration = C_Spell.GetSpellCooldown(spellName).duration
 			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
 		end)
+	end
+end)
+
+app.Event:Register("SPELL_UPDATE_ICON", function(spellID)
+	if TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell and spellID == app.ArtifactSpell then
+		app.ArtifactAbility.Button:SetNormalTexture(C_Spell.GetSpellTexture(app.ArtifactSpell))
 	end
 end)
 
