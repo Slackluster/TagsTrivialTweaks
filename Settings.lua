@@ -74,8 +74,5 @@ function app.Settings()
 	Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
 		app.Remix()
-		if TagsTrivialTweaks_Settings["artifactButton"] == false then
-			RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] hide; hide")
-		end
 	end)
 end
