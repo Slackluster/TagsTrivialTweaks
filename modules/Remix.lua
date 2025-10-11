@@ -1,6 +1,6 @@
--------------------------------------------
--- Tag's Trivial Tweaks: RemixButton.lua --
--------------------------------------------
+-------------------------------------
+-- Tag's Trivial Tweaks: Remix.lua --
+-------------------------------------
 
 -- Initialisation
 local appName, app = ...	-- Returns the addon name and a unique table
@@ -16,6 +16,10 @@ app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 		app.RemixArtifactButton()
 	end
 end)
+
+-----------------------------
+-- ARTIFACT ABILITY BUTTON --
+-----------------------------
 
 function app.RemixArtifactButton()
 	if InCombatLockdown() then
