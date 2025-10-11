@@ -19,9 +19,7 @@ end)
 
 function app.RemixArtifactButton()
 	if InCombatLockdown() then
-		C_Timer.After(0.5, function()
-			app.RemixArtifactButton()
-		end)
+		app.Queue.RemixArtifactButton = true
 		return
 	else
 		app.ButtonSkin = {
@@ -204,4 +202,11 @@ end)
 
 app.Event:Register("SPELLS_CHANGED", function(unitTarget, castGUID, spellID)
 	app.RemixArtifactButton()
+end)
+
+app.Event:Register("PLAYER_REGEN_ENABLED", function()
+	if app.Queue.RemixArtifactButton then
+		app.Queue.RemixArtifactButton = nil
+		app.RemixArtifactButton()
+	end
 end)
