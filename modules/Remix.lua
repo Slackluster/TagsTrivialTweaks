@@ -13,6 +13,7 @@ local LEM = LibStub('LibEditMode')
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
+		app.Queue = {}
 		app.RemixArtifactButton()
 	end
 end)
