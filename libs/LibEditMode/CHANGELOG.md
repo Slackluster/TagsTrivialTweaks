@@ -1,8 +1,33 @@
 # Lib: EditMode
 
-## [9](https://github.com/p3lim-wow/LibEditMode/tree/9) (2025-07-26)
-[Full Changelog](https://github.com/p3lim-wow/LibEditMode/commits/9) [Previous Releases](https://github.com/p3lim-wow/LibEditMode/releases)
+## [10](https://github.com/p3lim-wow/LibEditMode/tree/10) (2025-10-11)
+[Full Changelog](https://github.com/p3lim-wow/LibEditMode/commits/10) [Previous Releases](https://github.com/p3lim-wow/LibEditMode/releases)
 
+- Bump version  
+- Update Interface version (#31)  
+    Co-authored-by: p3lim <26496+p3lim@users.noreply.github.com>  
+- Need to check for nil on booleans  
+    Fixes #32  
+- Add a standalone test case  
+- Bump actions/checkout from 4 to 5 (#28)  
+    Bumps [actions/checkout](https://github.com/actions/checkout) from 4 to 5.  
+    - [Release notes](https://github.com/actions/checkout/releases)  
+    - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)  
+    - [Commits](https://github.com/actions/checkout/compare/v4...v5)  
+    ---  
+    updated-dependencies:  
+    - dependency-name: actions/checkout  
+      dependency-version: '5'  
+      dependency-type: direct:production  
+      update-type: version-update:semver-major  
+    ...  
+    Signed-off-by: dependabot[bot] <support@github.com>  
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>  
+- Update Interface version (#27)  
+    Co-authored-by: p3lim <26496+p3lim@users.noreply.github.com>  
+- Update Interface version (#26)  
+    Co-authored-by: p3lim <26496+p3lim@users.noreply.github.com>  
+- Use GitHub for sponsorship  
 - Bump minor  
 - Update Interface version (#25)  
     Co-authored-by: p3lim <26496+p3lim@users.noreply.github.com>  
