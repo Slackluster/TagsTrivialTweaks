@@ -13,7 +13,7 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Tokyo Drift: Vroom vroom.
 - Legion Remix - Artifact Button: Show an extra action button for your artifact ability. Movable through Edit Mode.
 
-![](https://media.forgecdn.net/attachments/1353/491/untitled-png.png)
+![](https://media.forgecdn.net/attachments/1355/53/spike-gif.gif)
 
 #### If you are experiencing issues
 - If you run into any issues or if you have other feedback, feel free to join the [Discord](https://discord.gg/FwWZZ39kPX) and ask in the `#tags-trivial-tweaks` channel, or create a [ticket on GitHub](https://github.com/Slackluster/TagsTrivialTweaks/issues). :)
