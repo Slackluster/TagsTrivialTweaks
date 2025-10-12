@@ -181,12 +181,6 @@ function app.RemixArtifactButton()
 				app.ArtifactAbility.Cooldown = CreateFrame("Cooldown", "ArtifactAbilityCooldown", app.ArtifactAbility.Button, "CooldownFrameTemplate")
 				app.ArtifactAbility.Cooldown:SetAllPoints(app.ArtifactAbility.Button)
 				app.ArtifactAbility.Cooldown:SetSwipeColor(1, 1, 1)
-
-				C_Timer.After(1, function()
-					local startTime = C_Spell.GetSpellCooldown(app.ArtifactSpell).startTime
-					local duration = C_Spell.GetSpellCooldown(app.ArtifactSpell).duration
-					app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
-				end)
 			else
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] hide; hide")
 			end
@@ -196,49 +190,47 @@ function app.RemixArtifactButton()
 	end
 end
 
-function app.SetArtifactButtonCooldown()
-	local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
-	local startTime = C_Spell.GetSpellCooldown(spellName).startTime
-	local duration = C_Spell.GetSpellCooldown(spellName).duration
-	app.ArtifactAbility.Cooldown:Clear()
-	app.ArtifactAbility.Cooldown:SetReverse(false)
-	app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+function app.UpdateArtifactButton()
+	C_Timer.After(0.1, function()	-- Spell info takes a moment to update
+		app.ArtifactAbility.Button:SetNormalTexture(C_Spell.GetSpellTexture(app.ArtifactSpell))
+		for i = 1, 40 do
+			if not C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL") then
+				app.ArtifactBuff = nil
+				break
+			elseif C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL").spellId == app.ArtifactSpell then
+				app.ArtifactBuff = C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL")
+				break
+			else
+				app.ArtifactBuff = nil
+			end
+		end
+
+		if app.ArtifactBuff then
+			local startTime = app.ArtifactBuff.expirationTime - app.ArtifactBuff.duration
+			local duration = app.ArtifactBuff.duration
+			CooldownFrame_Clear(app.ArtifactAbility.Cooldown)
+			app.ArtifactAbility.Cooldown:SetReverse(true)
+			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+		else
+			local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
+			local startTime = C_Spell.GetSpellCooldown(spellName).startTime
+			local duration = C_Spell.GetSpellCooldown(spellName).duration
+			CooldownFrame_Clear(app.ArtifactAbility.Cooldown)
+			app.ArtifactAbility.Cooldown:SetReverse(false)
+			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+		end
+	end)
 end
 
 app.Event:Register("UNIT_SPELLCAST_SUCCEEDED", function(unitTarget, castGUID, spellID)
-	C_Timer.After(0.1, function()	-- Delay to prevent the ArtifactBuff check from being too early
-		if unitTarget == "player" and TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell and not app.Queue.ArtifactBuff then
-			app.SetArtifactButtonCooldown()
-		end
-	end)
+	if TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell and unitTarget == "player" then
+		app.UpdateArtifactButton()
+	end
 end)
 
 app.Event:Register("SPELL_UPDATE_ICON", function(spellID)
 	if TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell and spellID == app.ArtifactSpell then
-		app.ArtifactAbility.Button:SetNormalTexture(C_Spell.GetSpellTexture(app.ArtifactSpell))
-		local buff = {}
-		for i = 1, 40 do
-			if not C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL") then
-				app.Queue.ArtifactBuff = false
-				break
-			elseif C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL").spellId == app.ArtifactSpell then
-				app.Queue.ArtifactBuff = true
-				buff = C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL")
-				break
-			else
-				app.Queue.ArtifactBuff = false
-			end
-		end
-
-		if app.Queue.ArtifactBuff then
-			local startTime = buff.expirationTime - buff.duration
-			local duration = buff.duration
-			app.ArtifactAbility.Cooldown:Clear()
-			app.ArtifactAbility.Cooldown:SetReverse(true)
-			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
-		else
-			app.SetArtifactButtonCooldown()
-		end
+		app.UpdateArtifactButton()
 	end
 end)
 
