@@ -59,6 +59,10 @@ function app.RemixArtifactButton()
 			app.ArtifactAbility.Texture:SetAtlas("stormwhite-extrabutton", true)
 			app.ArtifactAbility.Texture:SetVertexColor(0.2, 1, 0.2)
 
+			app.ArtifactAbility.Cooldown = CreateFrame("Cooldown", "ArtifactAbilityCooldown", app.ArtifactAbility.Button, "CooldownFrameTemplate")
+			app.ArtifactAbility.Cooldown:SetAllPoints(app.ArtifactAbility.Button)
+			app.ArtifactAbility.Cooldown:SetSwipeColor(1, 1, 1)
+
 			local defaultPosition = { point = "CENTER", x = 0, y = 0 }
 
 			local function onPositionChanged(frame, layoutName, point, x, y)
@@ -177,10 +181,6 @@ function app.RemixArtifactButton()
 					GameTooltip:SetSpellByID(app.ArtifactSpell)
 					GameTooltip:Show()
 				end)
-
-				app.ArtifactAbility.Cooldown = CreateFrame("Cooldown", "ArtifactAbilityCooldown", app.ArtifactAbility.Button, "CooldownFrameTemplate")
-				app.ArtifactAbility.Cooldown:SetAllPoints(app.ArtifactAbility.Button)
-				app.ArtifactAbility.Cooldown:SetSwipeColor(1, 1, 1)
 			else
 				RegisterStateDriver(app.ArtifactAbility, "visibility", "[combat] hide; hide")
 			end
