@@ -196,14 +196,19 @@ function app.RemixArtifactButton()
 	end
 end
 
+function app.SetArtifactButtonCooldown()
+	local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
+	local startTime = C_Spell.GetSpellCooldown(spellName).startTime
+	local duration = C_Spell.GetSpellCooldown(spellName).duration
+	app.ArtifactAbility.Cooldown:Clear()
+	app.ArtifactAbility.Cooldown:SetReverse(false)
+	app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+end
+
 app.Event:Register("UNIT_SPELLCAST_SUCCEEDED", function(unitTarget, castGUID, spellID)
 	C_Timer.After(0.1, function()	-- Delay to prevent the ArtifactBuff check from being too early
 		if unitTarget == "player" and TagsTrivialTweaks_Settings["artifactButton"] and app.ArtifactSpell and not app.Queue.ArtifactBuff then
-			local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
-			local startTime = C_Spell.GetSpellCooldown(spellName).startTime
-			local duration = C_Spell.GetSpellCooldown(spellName).duration
-			app.ArtifactAbility.Cooldown:SetReverse(false)
-			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+			app.SetArtifactButtonCooldown()
 		end
 	end)
 end)
@@ -224,11 +229,15 @@ app.Event:Register("SPELL_UPDATE_ICON", function(spellID)
 				app.Queue.ArtifactBuff = false
 			end
 		end
+
 		if app.Queue.ArtifactBuff then
 			local startTime = buff.expirationTime - buff.duration
 			local duration = buff.duration
+			app.ArtifactAbility.Cooldown:Clear()
 			app.ArtifactAbility.Cooldown:SetReverse(true)
 			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+		else
+			app.SetArtifactButtonCooldown()
 		end
 	end
 end)
