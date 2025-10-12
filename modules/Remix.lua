@@ -93,7 +93,7 @@ function app.RemixArtifactButton()
 
 				app.ArtifactAbility:ClearAllPoints()
 				app.ArtifactAbility:SetPoint(TagsTrivialTweaks_Settings.LEM[layoutName].point, TagsTrivialTweaks_Settings.LEM[layoutName].x, TagsTrivialTweaks_Settings.LEM[layoutName].y)
-				app.ArtifactAbility.Texture:SetAtlas(app.ButtonSkin[TagsTrivialTweaks_Settings.LEM[layoutName].style], true)
+				app.ArtifactAbility.Texture:SetAtlas(app.ButtonSkin[TagsTrivialTweaks_Settings.LEM[layoutName].style] or "stormwhite-extrabutton", true)
 			end)
 
 			LEM:AddFrameSettings(app.ArtifactAbility, {
