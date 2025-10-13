@@ -10,24 +10,24 @@ local appName, app = ...
 local L = app.locales
 
 -- General
--- L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/reload|r or relog."	-- "Requires Reload"
+L.REQUIRES_RELOAD =						"|cffFF0000" .. "Требуется перезагрузка" .. ".|r Используйте |cffFFFFFF/reload|r или перезайдите."	-- "Requires Reload"
 
 -- Edit Mode
--- L.SCALE = 								"Scale"
--- L.VISIBLE_OUT_COMBAT = 					"Visible Out of Combat"
+L.SCALE = 								"Масштаб"
+L.VISIBLE_OUT_COMBAT = 					"Видимость вне боя"
 
 -- Tooltip
--- L.REGION =								"Region"	-- Preceded by an abbreviated region name such as "EU" or "US"
+L.REGION =								"Регион"	-- Preceded by an abbreviated region name such as "EU" or "US"
 
 -- Remix: Artifact Button
--- L.ARTIFACT_FRAME =						"[TTT] Artifact Ability"
--- L.STYLE =								"Style"
--- L.STORM =								RELIC_SLOT_TYPE_WIND
--- L.AIR =									"Air"
--- L.FIRE =								DAMAGE_SCHOOL3
--- L.GENERIC =								"Generic"
--- L.WATER =								RELIC_SLOT_TYPE_WATER
--- L.GARRISON =							GARRISON_LOCATION_TOOLTIP
+L.ARTIFACT_FRAME =						"[TTT] Способность артефакта"
+L.STYLE =								"Стиль"
+L.STORM =								RELIC_SLOT_TYPE_WIND
+L.AIR =									"Воздух"
+L.FIRE =								DAMAGE_SCHOOL3
+L.GENERIC =								"Общий"
+L.WATER =								RELIC_SLOT_TYPE_WATER
+L.GARRISON =							GARRISON_LOCATION_TOOLTIP
 
 -- Settings
 L.SETTINGS_SPLITBAG_TITLE =				"Разделение количества мешков с реагентами"
@@ -46,6 +46,6 @@ L.SETTINGS_SHOWTOKENPRICE_TITLE =		"Показать цену жетона WoW"
 L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Отображать текущую цену жетона WoW в подсказке к предмету Жетон WoW."
 L.SETTINGS_TOKYODRIFT_TITLE = 			"Токийский Дрифт"
 L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Врум врум."
--- L.REMIX = 								"Remix"
--- L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Artifact Button"
--- L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Show an extra action button for your artifact ability. Movable through Edit Mode."
+L.REMIX = 								"Remix"
+L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Кнопка артефакта"
+L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Показывать дополнительную кнопку действия для способности вашего артефакта. Перемещаема через режим редактирования."
