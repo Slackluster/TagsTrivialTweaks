@@ -10,7 +10,7 @@ local appName, app = ...
 local L = app.locales
 
 -- General
-L.REQUIRES_RELOAD =						"|cffFF0000" .. "Требуется перезагрузка" .. ".|r Используйте |cffFFFFFF/reload|r или перезайдите."	-- "Requires Reload"
+L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Используйте |cffFFFFFF/reload|r или перезайдите."	-- "Requires Reload"
 
 -- Edit Mode
 L.SCALE = 								"Масштаб"
