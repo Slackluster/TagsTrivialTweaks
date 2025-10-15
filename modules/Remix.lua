@@ -95,6 +95,7 @@ function app.RemixArtifactButton()
 					TagsTrivialTweaks_Settings.LEM[layoutName] = CopyTable(defaultPosition)
 				end
 
+				app.ArtifactAbility:SetScale(TagsTrivialTweaks_Settings.LEM[layoutName].scale or 1)
 				app.ArtifactAbility:ClearAllPoints()
 				app.ArtifactAbility:SetPoint(TagsTrivialTweaks_Settings.LEM[layoutName].point, TagsTrivialTweaks_Settings.LEM[layoutName].x, TagsTrivialTweaks_Settings.LEM[layoutName].y)
 				app.ArtifactAbility.Texture:SetAtlas(app.ButtonSkin[TagsTrivialTweaks_Settings.LEM[layoutName].style] or "stormwhite-extrabutton", true)
