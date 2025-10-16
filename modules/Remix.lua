@@ -193,32 +193,34 @@ end
 
 function app.UpdateArtifactButton()
 	C_Timer.After(0.1, function()	-- Spell info takes a moment to update
-		app.ArtifactAbility.Button:SetNormalTexture(C_Spell.GetSpellTexture(app.ArtifactSpell))
-		for i = 1, 40 do
-			if not C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL") then
-				app.ArtifactBuff = nil
-				break
-			elseif C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL").spellId == app.ArtifactSpell then
-				app.ArtifactBuff = C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL")
-				break
-			else
-				app.ArtifactBuff = nil
+		if app.ArtifactSpell then
+			app.ArtifactAbility.Button:SetNormalTexture(C_Spell.GetSpellTexture(app.ArtifactSpell))
+			for i = 1, 40 do
+				if not C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL") then
+					app.ArtifactBuff = nil
+					break
+				elseif C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL").spellId == app.ArtifactSpell then
+					app.ArtifactBuff = C_UnitAuras.GetBuffDataByIndex("player", i, "HELPFUL")
+					break
+				else
+					app.ArtifactBuff = nil
+				end
 			end
-		end
 
-		if app.ArtifactBuff then
-			local startTime = app.ArtifactBuff.expirationTime - app.ArtifactBuff.duration
-			local duration = app.ArtifactBuff.duration
-			CooldownFrame_Clear(app.ArtifactAbility.Cooldown)
-			app.ArtifactAbility.Cooldown:SetReverse(true)
-			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
-		else
-			local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
-			local startTime = C_Spell.GetSpellCooldown(spellName).startTime
-			local duration = C_Spell.GetSpellCooldown(spellName).duration
-			CooldownFrame_Clear(app.ArtifactAbility.Cooldown)
-			app.ArtifactAbility.Cooldown:SetReverse(false)
-			app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+			if app.ArtifactBuff then
+				local startTime = app.ArtifactBuff.expirationTime - app.ArtifactBuff.duration
+				local duration = app.ArtifactBuff.duration
+				CooldownFrame_Clear(app.ArtifactAbility.Cooldown)
+				app.ArtifactAbility.Cooldown:SetReverse(true)
+				app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+			else
+				local spellName = C_Spell.GetSpellInfo(app.ArtifactSpell).name
+				local startTime = C_Spell.GetSpellCooldown(spellName).startTime
+				local duration = C_Spell.GetSpellCooldown(spellName).duration
+				CooldownFrame_Clear(app.ArtifactAbility.Cooldown)
+				app.ArtifactAbility.Cooldown:SetReverse(false)
+				app.ArtifactAbility.Cooldown:SetCooldown(startTime, duration)
+			end
 		end
 	end)
 end
