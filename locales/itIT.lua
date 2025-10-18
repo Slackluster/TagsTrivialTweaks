@@ -12,6 +12,9 @@ local L = app.locales
 -- General
 -- L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/reload|r or relog."	-- "Requires Reload"
 
+-- Version comms
+-- L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
+
 -- Edit Mode
 -- L.SCALE = 								"Scale"
 -- L.VISIBLE_OUT_COMBAT = 					"Visible Out of Combat"
