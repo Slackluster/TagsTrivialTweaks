@@ -40,3 +40,55 @@ end)
 function app.Colour(string)
 	return "|cffC69B6D" .. string .. "|r"
 end
+
+-------------------
+-- VERSION COMMS --
+-------------------
+
+function app.SendAddonMessage(message)
+	if IsInRaid(2) or IsInGroup(2) then
+		ChatThrottleLib:SendAddonMessage("NORMAL", "TagsTrivTweaks", message, "INSTANCE_CHAT")
+	elseif IsInRaid() then
+		ChatThrottleLib:SendAddonMessage("NORMAL", "TagsTrivTweaks", message, "RAID")
+	elseif IsInGroup() then
+		ChatThrottleLib:SendAddonMessage("NORMAL", "TagsTrivTweaks", message, "PARTY")
+	end
+end
+
+app.Event:Register("GROUP_ROSTER_UPDATE", function(category, partyGUID)
+	local message = "version:" .. C_AddOns.GetAddOnMetadata("TagsTrivialTweaks", "Version")
+	app.SendAddonMessage(message)
+end)
+
+app.Event:Register("CHAT_MSG_ADDON", function(prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID)
+	if prefix == "TagsTrivTweaks" then
+		local version = text:match("version:(.+)")
+		if version then
+			if version ~= "@project-version@" then
+				local expansion, major, minor, iteration = version:match("v(%d+)%.(%d+)%.(%d+)%-(%d%d%d)")
+				expansion = string.format("%02d", expansion)
+				major = string.format("%02d", major)
+				minor = string.format("%02d", minor)
+				local otherGameVersion = tonumber(expansion .. major .. minor)
+				local otherAddonVersion = tonumber(iteration)
+
+				local localVersion = C_AddOns.GetAddOnMetadata("TagsTrivialTweaks", "Version")
+				if localVersion ~= "@project-version@" then
+					expansion, major, minor, iteration = localVersion:match("v(%d+)%.(%d+)%.(%d+)%-(%d%d%d)")
+					expansion = string.format("%02d", expansion)
+					major = string.format("%02d", major)
+					minor = string.format("%02d", minor)
+					local localGameVersion = tonumber(expansion .. major .. minor)
+					local localAddonVersion = tonumber(iteration)
+
+					if otherGameVersion > localGameVersion or (otherGameVersion == localGameVersion and otherAddonVersion > localAddonVersion) then
+						if GetServerTime() - app.Flag.VersionCheck > 600 then
+							app.Print(L.NEW_VERSION_AVAILABLE, version)
+							app.Flag.VersionCheck = GetServerTime()
+						end
+					end
+				end
+			end
+		end
+	end
+end)
