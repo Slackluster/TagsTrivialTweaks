@@ -29,6 +29,7 @@ Database.lua
 Settings.lua
 modules\Backpack.lua
 modules\Fun.lua
+modules\Holidays.lua
 modules\OtherAddons.lua
 modules\Queue.lua
 modules\Remix.lua
