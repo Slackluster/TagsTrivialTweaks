@@ -67,6 +67,12 @@ function app.Settings()
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
 	Settings.CreateCheckbox(category, setting, tooltip)
 
+	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.HOLIDAYS))
+
+	local variable, name, tooltip = "candySit", L.SETTINGS_HALLOWSIT_TITLE, L.SETTINGS_HALLOWSIT_TOOLTIP
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	Settings.CreateCheckbox(category, setting, tooltip)
+
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.REMIX))
 
 	local variable, name, tooltip = "artifactButton", L.SETTINGS_ARTIFACTBUTTON_TITLE, L.SETTINGS_ARTIFACTBUTTON_TOOLTIP

@@ -12,6 +12,9 @@ local L = app.locales
 -- General
 -- L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/reload|r or relog."	-- "Requires Reload"
 
+-- Version comms
+-- L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
+
 -- Edit Mode
 -- L.SCALE = 								"Scale"
 -- L.VISIBLE_OUT_COMBAT = 					"Visible Out of Combat"
@@ -46,6 +49,9 @@ local L = app.locales
 -- L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Show the current WoW Token price on the WoW Token item tooltip."
 -- L.SETTINGS_TOKYODRIFT_TITLE = 			"Tokyo Drift"
 -- L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Vroom vroom."
+-- L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
+-- L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
+-- L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."
 -- L.REMIX = 								"Remix"
 -- L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Artifact Button"
 -- L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Show an extra action button for your artifact ability. Movable through Edit Mode."

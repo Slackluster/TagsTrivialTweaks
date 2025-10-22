@@ -12,6 +12,9 @@ local L = app.locales
 -- General
 L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Используйте |cffFFFFFF/reload|r или перезайдите."	-- "Requires Reload"
 
+-- Version comms
+-- L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
+
 -- Edit Mode
 L.SCALE = 								"Масштаб"
 L.VISIBLE_OUT_COMBAT = 					"Видимость вне боя"
@@ -46,6 +49,9 @@ L.SETTINGS_SHOWTOKENPRICE_TITLE =		"Показать цену жетона WoW"
 L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Отображать текущую цену жетона WoW в подсказке к предмету Жетон WoW."
 L.SETTINGS_TOKYODRIFT_TITLE = 			"Токийский Дрифт"
 L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Врум врум."
+-- L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
+-- L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
+-- L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."
 L.REMIX = 								"Remix"
 L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Кнопка артефакта"
 L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Показывать дополнительную кнопку действия для способности вашего артефакта. Перемещаема через режим редактирования."
