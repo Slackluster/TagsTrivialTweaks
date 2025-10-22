@@ -10,27 +10,27 @@ local appName, app = ...
 local L = app.locales
 
 -- General
--- L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/reload|r or relog."	-- "Requires Reload"
+L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Используйте |cffFFFFFF/reload|r или перезайдите."	-- "Requires Reload"
 
 -- Version comms
 -- L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
 
 -- Edit Mode
--- L.SCALE = 								"Scale"
--- L.VISIBLE_OUT_COMBAT = 					"Visible Out of Combat"
+L.SCALE = 								"Масштаб"
+L.VISIBLE_OUT_COMBAT = 					"Видимость вне боя"
 
 -- Tooltip
--- L.REGION =								"Region"	-- Preceded by an abbreviated region name such as "EU" or "US"
+L.REGION =								"Регион"	-- Preceded by an abbreviated region name such as "EU" or "US"
 
 -- Remix: Artifact Button
--- L.ARTIFACT_FRAME =						"[TTT] Artifact Ability"
--- L.STYLE =								"Style"
--- L.STORM =								RELIC_SLOT_TYPE_WIND
--- L.AIR =									"Air"
--- L.FIRE =								DAMAGE_SCHOOL3
--- L.GENERIC =								"Generic"
--- L.WATER =								RELIC_SLOT_TYPE_WATER
--- L.GARRISON =							GARRISON_LOCATION_TOOLTIP
+L.ARTIFACT_FRAME =						"[TTT] Способность артефакта"
+L.STYLE =								"Стиль"
+L.STORM =								RELIC_SLOT_TYPE_WIND
+L.AIR =									"Воздух"
+L.FIRE =								DAMAGE_SCHOOL3
+L.GENERIC =								"Общий"
+L.WATER =								RELIC_SLOT_TYPE_WATER
+L.GARRISON =							GARRISON_LOCATION_TOOLTIP
 
 -- Settings
 L.SETTINGS_SPLITBAG_TITLE =				"Разделение количества мешков с реагентами"
@@ -52,6 +52,6 @@ L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Врум врум."
 -- L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
 -- L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
 -- L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."
--- L.REMIX = 								"Remix"
--- L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Artifact Button"
--- L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Show an extra action button for your artifact ability. Movable through Edit Mode."
+L.REMIX = 								"Remix"
+L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Кнопка артефакта"
+L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Показывать дополнительную кнопку действия для способности вашего артефакта. Перемещаема через режим редактирования."
