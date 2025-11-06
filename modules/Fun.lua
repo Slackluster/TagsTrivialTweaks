@@ -24,6 +24,7 @@ app.Event:Register("UNIT_POWER_UPDATE", function(unitTarget, powerType)
 		-- If we're gaining or losing alternative power (turbo!) and are mounted on our DRIVE mount
 		if unitTarget == "player" and powerType == "ALTERNATE" and hasBuff(460013) then
 			if not app.TDHandle then
+				local _
 				_, app.TDHandle = PlaySoundFile("Interface\\AddOns\\TagsTrivialTweaks\\assets\\TokyoDrift.ogg", "Master")
 			end
 
