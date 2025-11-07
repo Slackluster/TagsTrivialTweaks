@@ -33,6 +33,13 @@ local L = app.locales
 -- L.GARRISON =							GARRISON_LOCATION_TOOLTIP
 
 -- Settings
+-- L.SETTINGS_SUPPORT_TEXTLONG =			"Developing this addon takes a significant amount of time and effort.\nPlease consider financially supporting the developer."
+-- L.SETTINGS_SUPPORT_TEXT =				"Support"
+-- L.SETTINGS_SUPPORT_BUTTON =				"Link"
+-- L.SETTINGS_SUPPORT_DESC =				"Thank you!"
+-- L.SETTINGS_SUPPORT_COPY =				"Ctrl+C to copy:"
+-- L.SETTINGS_SUPPORT_COPIED =				"Link copied to clipboard"
+
 -- L.SETTINGS_SPLITBAG_TITLE =				"Split Reagent Bag Count"
 -- L.SETTINGS_SPLITBAG_TOOLTIP =			"Shows the free slots of your regular bags and your reagent bag separately on top of the backpack icon."
 -- L.SETTINGS_QUEUESOUND_TITLE =			"Play Queue Sound"

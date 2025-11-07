@@ -27,6 +27,7 @@ libs\LibEditMode\embed.xml
 Core.lua
 Database.lua
 Settings.lua
+SettingsTemplates.xml
 modules\Backpack.lua
 modules\Fun.lua
 modules\Holidays.lua
