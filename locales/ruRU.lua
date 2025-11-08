@@ -33,12 +33,12 @@ L.WATER =								RELIC_SLOT_TYPE_WATER
 L.GARRISON =							GARRISON_LOCATION_TOOLTIP
 
 -- Settings
--- L.SETTINGS_SUPPORT_TEXTLONG =			"Developing this addon takes a significant amount of time and effort.\nPlease consider financially supporting the developer."
--- L.SETTINGS_SUPPORT_TEXT =				"Support"
--- L.SETTINGS_SUPPORT_BUTTON =				"Link"
--- L.SETTINGS_SUPPORT_DESC =				"Thank you!"
--- L.SETTINGS_SUPPORT_COPY =				"Ctrl+C to copy:"
--- L.SETTINGS_SUPPORT_COPIED =				"Link copied to clipboard"
+L.SETTINGS_SUPPORT_TEXTLONG = "Разработка этого аддона требует значительного времени и усилий.\nПожалуйста, рассмотрите возможность финансовой поддержки разработчика."
+L.SETTINGS_SUPPORT_TEXT = "Поддержать"
+L.SETTINGS_SUPPORT_BUTTON = "Ссылка"
+L.SETTINGS_SUPPORT_DESC = "Спасибо!"
+L.SETTINGS_SUPPORT_COPY = "Ctrl+C — скопировать:"
+L.SETTINGS_SUPPORT_COPIED = "Ссылка скопирована в буфер обмена"
 
 L.SETTINGS_SPLITBAG_TITLE =				"Разделение количества мешков с реагентами"
 L.SETTINGS_SPLITBAG_TOOLTIP =			"Показывает свободные слоты ваших обычных сумок и сумки с реагентами отдельно над значком рюкзака."
@@ -56,9 +56,9 @@ L.SETTINGS_SHOWTOKENPRICE_TITLE =		"Показать цену жетона WoW"
 L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Отображать текущую цену жетона WoW в подсказке к предмету Жетон WoW."
 L.SETTINGS_TOKYODRIFT_TITLE = 			"Токийский Дрифт"
 L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Врум врум."
--- L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
--- L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
--- L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."
+L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
+L.SETTINGS_HALLOWSIT_TITLE =			"[Тыквовин] Без уловок"
+L.SETTINGS_HALLOWSIT_TOOLTIP =			"Сядьте, прежде чем выполнять задание «Кулек конфет», чтобы не дать себя обмануть и успокоить."
 L.REMIX = 								"Remix"
 L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Кнопка артефакта"
 L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Показывать дополнительную кнопку действия для способности вашего артефакта. Перемещаема через режим редактирования."
