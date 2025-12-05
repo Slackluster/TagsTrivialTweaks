@@ -29,6 +29,7 @@ Database.lua
 Settings.lua
 SettingsTemplates.xml
 modules\Backpack.lua
+modules\CVars.lua
 modules\Fun.lua
 modules\Holidays.lua
 modules\OtherAddons.lua
