@@ -7,6 +7,7 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 **Features**
 - Split Reagent Bag Count: Shows the free slots of your regular bags and your reagent bag separately on top of the backpack icon.
 - Play Queue Sound: Play the Deadly Boss Mods style queue sound when any queue pops, including battlegrounds and pet battles.
+- Disable Always Compare: Disable the always compare items behavior added in 11.2.7.
 - Disable HandyNotes Alt+RMB: Let TTT disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
 - Fix Oribos Exchange Tooltip: Let TTT simplify and fix the tooltip provided by the Oribos Exchange addon.
 - Show WoW Token Price: Show the current WoW Token price on the WoW Token item tooltip.
