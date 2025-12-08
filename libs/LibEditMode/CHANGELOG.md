@@ -1,8 +1,113 @@
 # Lib: EditMode
 
-## [10](https://github.com/p3lim-wow/LibEditMode/tree/10) (2025-10-11)
-[Full Changelog](https://github.com/p3lim-wow/LibEditMode/commits/10) [Previous Releases](https://github.com/p3lim-wow/LibEditMode/releases)
+## [11](https://github.com/p3lim-wow/LibEditMode/tree/11) (2025-12-07)
+[Full Changelog](https://github.com/p3lim-wow/LibEditMode/commits/11) [Previous Releases](https://github.com/p3lim-wow/LibEditMode/releases)
 
+- Bump version  
+- Rethink how we allow multi-select dropdowns  
+    Ref #56  
+- Lint  
+- Fix doc links  
+- Add option to disable settings, with accompanying functions  
+- Support non-radio correctly  
+    Fixes #56  
+- Add color picker support  
+    Fixes #53  
+- Support fine editing for slider  
+    Fixes #52  
+- Bump actions/checkout from 5 to 6 (#51)  
+    Bumps [actions/checkout](https://github.com/actions/checkout) from 5 to 6.  
+    - [Release notes](https://github.com/actions/checkout/releases)  
+    - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)  
+    - [Commits](https://github.com/actions/checkout/compare/v5...v6)  
+    ---  
+    updated-dependencies:  
+    - dependency-name: actions/checkout  
+      dependency-version: '6'  
+      dependency-type: direct:production  
+      update-type: version-update:semver-major  
+    ...  
+    Signed-off-by: dependabot[bot] <support@github.com>  
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>  
+- Lint  
+- Add description tooltip support  
+    This is beyond what blizzard supports, but it's nice to have  
+- Update wiki on tags only  
+- Rename tags workflow  
+- Reset dialog predictably  
+    Fixes #5  
+- Don't figure callbacks early  
+- Update cache whenever the layouts change  
+    It's not guaranteed to be on ADDON\_LOADED  
+- Don't throw errors with missing layouts  
+    This actually kills the init process of the entire library  
+- Different table structure  
+- Use cache when querying layout names  
+    C\_EditMode.GetLayouts() requires pulling data from the server, which  
+    causes a freeze every time it's called (based on latency)  
+- Fix error on early loading  
+- Specs can trigger layout changes  
+    Ref https://github.com/Gethe/wow-ui-source/blob/cbd9586890ae30fd5bdfb2f87533f3c35877ef9a/Interface/AddOns/Blizzard\_EditMode/Mainline/EditModeManager.lua#L181C19-L187  
+    Fixes #47  
+- Fix regression  
+    Fixes #48  
+- Try to run layout callback on registration (#46)  
+- Lint  
+- Trigger layout callbacks when frames are added  
+    Otherwise it's rather cumbersome to deal with updates.  
+- Add callbacks for create, rename and delete  
+    Fixes #45  
+- Pass layout index of the changed layout  
+    Fixes #45  
+- Don't get in the way  
+- :lipstick:  
+- Prevent clicking through the extension dialog  
+- Keep extension static (#44)  
+- Add docs for #43  
+- Split entry's name and value (#43)  
+- Manually fetch layout info (#42)  
+- Better handling of system names  
+- Don't waste minutes  
+- :lipstick:  
+- :lipstick:  
+- :lipstick:  
+- :lipstick:  
+- :lipstick:  
+- Rearrange for docs cohesiveness  
+- Re-add docs for the deprecated method but mark it  
+- Make extension settings divider dynamic  
+- Add method to add multiple buttons at once  
+- Overlap system dialogs so they look unified  
+- Fix system dialog width  
+- Add test case for system settings  
+- Oops  
+- It bothers me so much...  
+- Move DropdownOption after Dropdown  
+- Reset position belongs in .Buttons  
+- Add extension to blizz settings (#37)  
+- Add divider widget (#36)  
+- Bump actions/upload-artifact from 4 to 5 (#35)  
+    Bumps [actions/upload-artifact](https://github.com/actions/upload-artifact) from 4 to 5.  
+    - [Release notes](https://github.com/actions/upload-artifact/releases)  
+    - [Commits](https://github.com/actions/upload-artifact/compare/v4...v5)  
+    ---  
+    updated-dependencies:  
+    - dependency-name: actions/upload-artifact  
+      dependency-version: '5'  
+      dependency-type: direct:production  
+      update-type: version-update:semver-major  
+    ...  
+    Signed-off-by: dependabot[bot] <support@github.com>  
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>  
+- Prevent combat errors from protected API  
+- Prevent OnDragStop from erroring  
+- Stop dragging if the player enters combat  
+- Don't try to move things in combat  
+- Update dialog on all movement  
+- Lint  
+- Add per pixel adjustment via arrow keys (#33)  
+- Consider any floating point issues  
+- Disable reset position button if we're at default position  
 - Bump version  
 - Update Interface version (#31)  
     Co-authored-by: p3lim <26496+p3lim@users.noreply.github.com>  
@@ -106,93 +211,3 @@
     #	.github/workflows/version.yml  
 - Create FUNDING.yml  
 - Update Interface version  
-- Bump actions/checkout from 3 to 4  
-    Bumps [actions/checkout](https://github.com/actions/checkout) from 3 to 4.  
-    - [Release notes](https://github.com/actions/checkout/releases)  
-    - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)  
-    - [Commits](https://github.com/actions/checkout/compare/v3...v4)  
-    ---  
-    updated-dependencies:  
-    - dependency-name: actions/checkout  
-      dependency-type: direct:production  
-      update-type: version-update:semver-major  
-    ...  
-    Signed-off-by: dependabot[bot] <support@github.com>  
-- Bump p3lim/toc-interface-updater from 2 to 3  
-    Bumps [p3lim/toc-interface-updater](https://github.com/p3lim/toc-interface-updater) from 2 to 3.  
-    - [Release notes](https://github.com/p3lim/toc-interface-updater/releases)  
-    - [Commits](https://github.com/p3lim/toc-interface-updater/compare/v2...v3)  
-    ---  
-    updated-dependencies:  
-    - dependency-name: p3lim/toc-interface-updater  
-      dependency-type: direct:production  
-      update-type: version-update:semver-major  
-    ...  
-    Signed-off-by: dependabot[bot] <support@github.com>  
-- Update license  
-- :broom:  
-- Update version  
-- Revert dc15c87  
-- Securely dispatch callbacks  
-- Manually trigger layout callbacks registering late  
-- Update version  
-- Use override name for dialog title  
-- Fix checked status for dropdown labels  
-- Fallback on defaults correctly  
-- Correctly reset settings objects  
-- Fix bogus dep  
-- Bump Interface version  
-- Add override for label name  
-- Bump p3lim/license-year-updater from 1 to 2  
-    Bumps [p3lim/license-year-updater](https://github.com/p3lim/license-year-updater) from 1 to 2.  
-    - [Release notes](https://github.com/p3lim/license-year-updater/releases)  
-    - [Commits](https://github.com/p3lim/license-year-updater/compare/v1...v2)  
-    ---  
-    updated-dependencies:  
-    - dependency-name: p3lim/license-year-updater  
-      dependency-type: direct:production  
-      update-type: version-update:semver-major  
-    ...  
-    Signed-off-by: dependabot[bot] <support@github.com>  
-- Bump version  
-- Bump workflow actions  
-- Bump Interface version  
-- Fix for 10.1  
-    Fix #12  
-- LDD refreshes menus itself in minor9  
-- Update Interface version (#9)  
-    Co-authored-by: p3lim <p3lim@users.noreply.github.com>  
-- Merge pull request #8 from p3lim-wow/update-license  
-    Update license  
-- Update license  
-- Update version  
-- Only bump minor  
-- Linting  
-- That's not how this works  
-- There might not be an old minor  
-- Add note about lib.dialog compat  
-- Add utility to help with tagging  
-    Since we define MINOR in multiple places it's crucial they are equal  
-- Almost missed a file  
-- Update Interface version  
-- Only attempt to refresh dropdowns if the lib supports it  
-- Add version compatibility checks and backports  
-- Add note  
-- Don't lint tests  
-- Add a functional example to use for testing/validation  
-- Return a boolean  
-- Refresh dropdowns on selection  
-- Document the layout callback signature  
-- Namespace internal methods and drop their docs  
-- Doc adjustments  
-- Document types  
-- Ignore trailing whitespace in comments  
-- Fix links  
-- Fixup  
-- Create page for object types  
-- Fix some links  
-- Document most of the functionality  
-- Set up automated releases  
-- Update version  
-- Force hide selections when we leave edit mode  
-- :sparkles:  
