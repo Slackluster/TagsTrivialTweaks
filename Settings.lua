@@ -92,6 +92,28 @@ function app.Settings()
 
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(C_AddOns.GetAddOnMetadata(appName, "Version")))
 
+	local variable, name, tooltip = "cursorGuide", L.SETTINGS_CURSORGUIDE_TITLE, L.SETTINGS_CURSORGUIDE_TOOLTIP
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
+	local parentSetting = Settings.CreateCheckbox(category, setting, tooltip)
+	setting:SetValueChangedCallback(function()
+		app.SetCursorGuideVisibility()
+	end)
+
+	local variable, name, tooltip = "cursorGuideCombat", L.SETTINGS_CURSORGUIDE_COMBAT_TITLE, L.SETTINGS_CURSORGUIDE_COMBAT_TOOLTIP
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local subSetting = Settings.CreateCheckbox(category, setting, tooltip)
+	subSetting:SetParentInitializer(parentSetting, function() return TagsTrivialTweaks_Settings["cursorGuide"] end)
+	setting:SetValueChangedCallback(function()
+		app.SetCursorGuideVisibility()
+	end)
+
+	local variable, name, tooltip = "disableAlwaysCompare", L.SETTINGS_COMPARE_TITLE, L.SETTINGS_COMPARE_TOOLTIP
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	Settings.CreateCheckbox(category, setting, tooltip)
+	setting:SetValueChangedCallback(function()
+		app.ToggleAlwaysCompare()
+	end)
+
 	local variable, name, tooltip = "backpackCount", L.SETTINGS_SPLITBAG_TITLE, L.SETTINGS_SPLITBAG_TOOLTIP
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
@@ -110,12 +132,15 @@ function app.Settings()
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
 	Settings.CreateCheckbox(category, setting, tooltip)
 
-	local variable, name, tooltip = "disableAlwaysCompare", L.SETTINGS_COMPARE_TITLE, L.SETTINGS_COMPARE_TOOLTIP
+	local variable, name, tooltip = "showTokenPrice", L.SETTINGS_SHOWTOKENPRICE_TITLE, L.SETTINGS_SHOWTOKENPRICE_TOOLTIP
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
-	setting:SetValueChangedCallback(function()
-		app.ToggleAlwaysCompare()
-	end)
+
+	local variable, name, tooltip = "tokyoDrift", L.SETTINGS_TOKYODRIFT_TITLE, L.SETTINGS_TOKYODRIFT_TOOLTIP
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
+	Settings.CreateCheckbox(category, setting, tooltip)
+
+	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.ADDONS))
 
 	local variable, name, tooltip = "handyNotes", L.SETTINGS_HANDYNOTESFIX_TITLE, L.SETTINGS_HANDYNOTESFIX_TOOLTIP
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
@@ -127,14 +152,6 @@ function app.Settings()
 	setting:SetValueChangedCallback(function()
 		app.HideOribos()
 	end)
-
-	local variable, name, tooltip = "showTokenPrice", L.SETTINGS_SHOWTOKENPRICE_TITLE, L.SETTINGS_SHOWTOKENPRICE_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
-	Settings.CreateCheckbox(category, setting, tooltip)
-
-	local variable, name, tooltip = "tokyoDrift", L.SETTINGS_TOKYODRIFT_TITLE, L.SETTINGS_TOKYODRIFT_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
-	Settings.CreateCheckbox(category, setting, tooltip)
 
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.HOLIDAYS))
 
