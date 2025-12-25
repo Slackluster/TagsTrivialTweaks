@@ -21,6 +21,9 @@ app.Event:Register("UNIT_POWER_UPDATE", function(unitTarget, powerType)
 			return false
 		end
 
+		local secretAura = C_UnitAuras.GetBuffDataByIndex("player", 1)
+		if secretAura and secretAura.spellId and issecretvalue(secretAura.spellId) then return end
+
 		-- If we're gaining or losing alternative power (turbo!) and are mounted on our DRIVE mount
 		if unitTarget == "player" and powerType == "ALTERNATE" and hasBuff(460013) then
 			if not app.TDHandle then
