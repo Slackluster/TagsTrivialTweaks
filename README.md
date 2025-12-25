@@ -11,10 +11,8 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Play Queue Sound: Play the queue sound on the Master channel when any queue pops, including battlegrounds and pet battles.
 - Show WoW Token Price: Show the current WoW Token price on the WoW Token item tooltip.
 - Tokyo Drift: Vroom vroom.
-
 - Disable HandyNotes Alt+RMB: Let TTT disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
 - Fix Oribos Exchange Tooltip: Let TTT simplify and fix the tooltip provided by the Oribos Exchange addon.
-
 - [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
 - [Legion Remix] Artifact Button: Show an extra action button for your artifact ability. Movable through Edit Mode.
 
