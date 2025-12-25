@@ -5,14 +5,18 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 **Tag's Trivial Tweaks** turn tedious tasks tolerable.
 
 **Features**
+- Cursor Guide: Show a guide around the cursor to help you keep track of it.
+- Disable Always Compare: Disable the always compare items behavior added in 11.2.7.
 - Split Reagent Bag Count: Shows the free slots of your regular bags and your reagent bag separately on top of the backpack icon.
 - Play Queue Sound: Play the queue sound on the Master channel when any queue pops, including battlegrounds and pet battles.
-- Disable Always Compare: Disable the always compare items behavior added in 11.2.7.
-- Disable HandyNotes Alt+RMB: Let TTT disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
-- Fix Oribos Exchange Tooltip: Let TTT simplify and fix the tooltip provided by the Oribos Exchange addon.
 - Show WoW Token Price: Show the current WoW Token price on the WoW Token item tooltip.
 - Tokyo Drift: Vroom vroom.
-- Legion Remix - Artifact Button: Show an extra action button for your artifact ability. Movable through Edit Mode.
+
+- Disable HandyNotes Alt+RMB: Let TTT disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
+- Fix Oribos Exchange Tooltip: Let TTT simplify and fix the tooltip provided by the Oribos Exchange addon.
+
+- [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
+- [Legion Remix] Artifact Button: Show an extra action button for your artifact ability. Movable through Edit Mode.
 
 ![](https://media.forgecdn.net/attachments/1355/53/spike-gif.gif)
 
