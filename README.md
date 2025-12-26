@@ -8,6 +8,10 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Cursor Guide: Show a guide around the cursor to help you keep track of it.
 - Disable Always Compare: Disable the always compare items behavior added in 11.2.7.
 - Split Reagent Bag Count: Shows the free slots of your regular bags and your reagent bag separately on top of the backpack icon.
+- Instant Catalyst: Hold Shift to instantly catalyze an item, skipping the 5 second timer.
+- Instant Great Vault: Hold Shift to instantly receive your reward from the Great Vault and skip the 5 second timer.
+- Disable Vendor Filter: Automatically set all vendor filters to All to display items normally not shown to your class.
+- Hide loot roll window: Hide the window that shows loot rolls and their results. You can show the window again with /loot.
 - Play Queue Sound: Play the queue sound on the Master channel when any queue pops, including battlegrounds and pet battles.
 - Show WoW Token Price: Show the current WoW Token price on the WoW Token item tooltip.
 - Tokyo Drift: Vroom vroom.
