@@ -27,7 +27,7 @@ libs\LibBattlePetTooltipLine\LibBattlePetTooltipLine.lua
 Core.lua
 Database.lua
 Settings.lua
-SettingsTemplates.xml
+FrameTemplates.xml
 modules\Backpack.lua
 modules\Cursor.lua
 modules\CVars.lua
