@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: ptBR.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: ptBR.lua --
+-------------------------------------
 -- Portuguese (Brazil) localisation
 -- Translator(s):
 

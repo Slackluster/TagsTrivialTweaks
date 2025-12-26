@@ -1,6 +1,6 @@
---------------------------------------
--- Tag's Trivial Tweaks: Cursor.lua --
---------------------------------------
+---------------------------------------
+-- Slacker's Tweak Suite: Cursor.lua --
+---------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -22,7 +22,7 @@ end)
 -- This feature is recreated from a WeakAura whose author I can't verify, and uses a texture taken from the WeakAuras addon: Square_AlphaGradient.tga
 
 function app.CreateCursorGuide()
-	app.CursorGuide = CreateFrame("Frame", "TagsTrivialTweaksCursorGuide", UIParent)
+	app.CursorGuide = CreateFrame("Frame", "SlackersTweakSuiteCursorGuide", UIParent)
 	app.CursorGuide:SetFrameStrata("HIGH")
 
 	local function FollowCursor(self)
@@ -37,7 +37,7 @@ function app.CreateCursorGuide()
 
 		local tex = frame:CreateTexture(nil, "OVERLAY")
 		tex:SetAllPoints()
-		tex:SetTexture("Interface\\AddOns\\TagsTrivialTweaks\\assets\\CursorGradient.tga")
+		tex:SetTexture("Interface\\AddOns\\SlackersTweakSuite\\assets\\CursorGradient.tga")
 		tex:SetAlpha(0.6)
 		if rotation then tex:SetRotation(rotation.angle, rotation.pivot) end
 
@@ -62,8 +62,8 @@ function app.SetCursorGuideVisibility()
 
 	RegisterAttributeDriver(app.CursorGuide, "state-visibility", "[combat] hide; hide")
 
-	if TagsTrivialTweaks_Settings["cursorGuide"] then
-		if TagsTrivialTweaks_Settings["cursorGuideCombat"] then
+	if SlackersTweakSuite_Settings["cursorGuide"] then
+		if SlackersTweakSuite_Settings["cursorGuideCombat"] then
 			RegisterAttributeDriver(app.CursorGuide, "state-visibility", "[combat] show; hide")
 		else
 			RegisterAttributeDriver(app.CursorGuide, "state-visibility", "[combat] show; show")

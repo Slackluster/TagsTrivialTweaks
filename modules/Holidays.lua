@@ -1,6 +1,6 @@
-----------------------------------------
--- Tag's Trivial Tweaks: Holidays.lua --
-----------------------------------------
+-----------------------------------------
+-- Slacker's Tweak Suite: Holidays.lua --
+-----------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -10,7 +10,7 @@ local appName, app = ...
 ------------------
 
 app.Event:Register("PLAYER_SOFT_INTERACT_CHANGED", function(oldTarget, newTarget)
-	if TagsTrivialTweaks_Settings["candySit"] then
+	if SlackersTweakSuite_Settings["candySit"] then
 		local candyBucket = {
 			"Candy Bucket",
 			"Eimer mit Süßigkeiten",
@@ -36,7 +36,7 @@ app.Event:Register("PLAYER_SOFT_INTERACT_CHANGED", function(oldTarget, newTarget
 end)
 
 app.Event:Register("QUEST_COMPLETE", function()
-	if TagsTrivialTweaks_Settings["candySit"] and app.SoftTarget and app.SoftTarget == "Candy Bucket" then
+	if SlackersTweakSuite_Settings["candySit"] and app.SoftTarget and app.SoftTarget == "Candy Bucket" then
 		DoEmote("SIT", "player", true)
 	end
 end)

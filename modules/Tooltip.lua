@@ -1,6 +1,6 @@
----------------------------------------
--- Tag's Trivial Tweaks: Tooltip.lua --
----------------------------------------
+----------------------------------------
+-- Slacker's Tweak Suite: Tooltip.lua --
+----------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -23,7 +23,7 @@ function app.TokenPrice()
 	local function OnTooltipSetItem(tooltip)
 		local _, _, itemID = TooltipUtil.GetDisplayedItem(tooltip)
 
-		if TagsTrivialTweaks_Settings["showTokenPrice"] then
+		if SlackersTweakSuite_Settings["showTokenPrice"] then
 			if itemID and itemID == 122270 and C_WowTokenPublic.GetCurrentMarketPrice() then
 				tooltip:AddLine(" ")
 				tooltip:AddDoubleLine(TOKEN_CURRENT_MARKET_PRICE, GetMoneyString(C_WowTokenPublic.GetCurrentMarketPrice()))

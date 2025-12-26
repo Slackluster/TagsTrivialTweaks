@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: deDE.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: deDE.lua --
+-------------------------------------
 -- German (Germany) localisation
 -- Translator(s):
 

@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: itIT.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: itIT.lua --
+-------------------------------------
 -- 	Italian (Italy) localisation
 -- Translator(s):
 

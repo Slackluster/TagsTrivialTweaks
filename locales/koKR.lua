@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: koKR.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: koKR.lua --
+-------------------------------------
 -- Korean (Korea) localisation
 -- Translator(s):
 

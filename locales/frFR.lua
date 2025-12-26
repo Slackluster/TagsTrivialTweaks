@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: frFR.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: frFR.lua --
+-------------------------------------
 -- French (France) localisation
 -- Translator(s): Klep-Ysondre
 

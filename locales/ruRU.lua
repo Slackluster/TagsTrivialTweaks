@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: ruRU.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: ruRU.lua --
+-------------------------------------
 -- Russian (Russia) localisation
 -- Translator(s): ZamestoTV
 

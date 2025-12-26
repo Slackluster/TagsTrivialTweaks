@@ -1,6 +1,6 @@
--------------------------------------------
--- Tag's Trivial Tweaks: OtherAddons.lua --
--------------------------------------------
+--------------------------------------------
+-- Slacker's Tweak Suite: OtherAddons.lua --
+--------------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -23,7 +23,7 @@ end)
 ----------------------------
 
 function app.DisableHandyNotesAltRMB()
-	if TagsTrivialTweaks_Settings["handyNotes"] then
+	if SlackersTweakSuite_Settings["handyNotes"] then
 		-- Thank you for this code, Numy, this saves me a lot of frustration
 		if C_AddOns.IsAddOnLoaded("HandyNotes") and LibStub("AceAddon-3.0"):GetAddon("HandyNotes") then
 			local f = LibStub("AceAddon-3.0"):GetAddon("HandyNotes"):GetModule("HandyNotes").ClickHandlerFrame
@@ -58,7 +58,7 @@ function app.UnderminePrices()
 		-- Return if no link or BoP item
 		if not itemLink or select(14, C_Item.GetItemInfo(itemLink)) == 1 then return end
 
-		if TagsTrivialTweaks_Settings["underminePrices"] then
+		if SlackersTweakSuite_Settings["underminePrices"] then
 			if C_AddOns.IsAddOnLoaded("OribosExchange") then
 				local marketPrice = 0
 				local regionPrice = 0
@@ -112,7 +112,7 @@ end
 
 local LibBattlePetTooltipLine = LibStub("LibBattlePetTooltipLine-1-0")
 hooksecurefunc("BattlePetToolTip_Show", function(...)
-	if TagsTrivialTweaks_Settings["underminePrices"] then
+	if SlackersTweakSuite_Settings["underminePrices"] then
 		if C_AddOns.IsAddOnLoaded("OribosExchange") then
 			local speciesID1, level, breedQuality, maxHealth, power, speed, bracketName = ...
 			local itemLink = "|cff0070dd|Hbattlepet:" .. speciesID1 .. ":" .. level .. ":" .. breedQuality .. ":" .. maxHealth .. ":" .. power .. ":" .. speed .. "|h" .. bracketName .. "|h|r"
@@ -168,7 +168,7 @@ hooksecurefunc("BattlePetToolTip_Show", function(...)
 end)
 
 function app.HideOribos()
-	if TagsTrivialTweaks_Settings["underminePrices"] then
+	if SlackersTweakSuite_Settings["underminePrices"] then
 		if C_AddOns.IsAddOnLoaded("OribosExchange") then
 			OETooltip(false)
 

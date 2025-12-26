@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: esMX.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: esMX.lua --
+-------------------------------------
 -- Spanish (Mexico) localisation
 -- Translator(s):
 

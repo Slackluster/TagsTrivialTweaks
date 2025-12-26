@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: enUS.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: enUS.lua --
+-------------------------------------
 -- English (United States) localisation
 -- Translator(s): N/A
 

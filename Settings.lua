@@ -1,6 +1,6 @@
-----------------------------------------
--- Tag's Trivial Tweaks: Settings.lua --
-----------------------------------------
+-----------------------------------------
+-- Slacker's Tweak Suite: Settings.lua --
+-----------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -12,14 +12,13 @@ local L = app.locales
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
-		if not TagsTrivialTweaks_Settings then TagsTrivialTweaks_Settings = {} end
+		if not SlackersTweakSuite_Settings then SlackersTweakSuite_Settings = {} end
+
+		-- Midnight cleanup
+		if TagsTrivialTweaks_Settings ~= nil then TagsTrivialTweaks_Settings = nil end
 
 		app.CreateLinkCopiedFrame()
 		app.Settings()
-
-		-- Midnight cleanup
-		if TagsTrivialTweaks_Settings.LEM then TagsTrivialTweaks_Settings.LEM = nil end
-		if TagsTrivialTweaks_Settings["artifactButton"] then TagsTrivialTweaks_Settings["artifactButton"] = nil end
 	end
 end)
 
@@ -33,19 +32,19 @@ function app.Settings()
 	Settings.RegisterAddOnCategory(category)
 	app.Category = category
 
-	TagsTrivialTweaks_SettingsTextMixin = {}
-	function TagsTrivialTweaks_SettingsTextMixin:Init(initializer)
+	SlackersTweakSuite_SettingsTextMixin = {}
+	function SlackersTweakSuite_SettingsTextMixin:Init(initializer)
 		local data = initializer:GetData()
 		self.Text:SetTextToFit(data.text)
 	end
 
 	local data = {text = L.SETTINGS_SUPPORT_TEXTLONG}
-	local text = layout:AddInitializer(Settings.CreateElementInitializer("TagsTrivialTweaks_SettingsText", data))
+	local text = layout:AddInitializer(Settings.CreateElementInitializer("SlackersTweakSuite_SettingsText", data))
 	function text:GetExtent()
 		return 28 + select(2, string.gsub(data.text, "\n", "")) * 12
 	end
 
-	StaticPopupDialogs["TAGSTRIVIALTWEAKS_URL"] = {
+	StaticPopupDialogs["SLACKERSTWEAKSUITE_URL"] = {
 		text = L.SETTINGS_URL_COPY,
 		button1 = CLOSE,
 		whileDead = true,
@@ -80,52 +79,52 @@ function app.Settings()
 		end,
 	}
 	local function onSupportButtonClick()
-		StaticPopup_Show("TAGSTRIVIALTWEAKS_URL", nil, nil, "https://buymeacoffee.com/slackluster")
+		StaticPopup_Show("SLACKERSTWEAKSUITE_URL", nil, nil, "https://buymeacoffee.com/slackluster")
 	end
 	layout:AddInitializer(CreateSettingsButtonInitializer(L.SETTINGS_SUPPORT_TEXT, L.SETTINGS_SUPPORT_BUTTON, onSupportButtonClick, L.SETTINGS_SUPPORT_DESC, true))
 
 	local function onHelpButtonClick()
-		StaticPopup_Show("TAGSTRIVIALTWEAKS_URL", nil, nil, "https://discord.gg/hGvF59hstx")
+		StaticPopup_Show("SLACKERSTWEAKSUITE_URL", nil, nil, "https://discord.gg/hGvF59hstx")
 	end
 	layout:AddInitializer(CreateSettingsButtonInitializer(L.SETTINGS_HELP_TEXT, L.SETTINGS_HELP_BUTTON, onHelpButtonClick, L.SETTINGS_HELP_DESC, true))
 
 	local function onIssuesButtonClick()
-		StaticPopup_Show("TAGSTRIVIALTWEAKS_URL", nil, nil, "https://github.com/slackluster/TagsTrivialTweaks/issues")
+		StaticPopup_Show("SLACKERSTWEAKSUITE_URL", nil, nil, "https://github.com/slackluster/SlackersTweakSuite/issues")
 	end
 	layout:AddInitializer(CreateSettingsButtonInitializer(L.SETTINGS_ISSUES_TEXT, L.SETTINGS_ISSUES_BUTTON, onIssuesButtonClick, L.SETTINGS_ISSUES_DESC, true))
 
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(C_AddOns.GetAddOnMetadata(appName, "Version")))
 
 	local variable, name, tooltip = "cursorGuide", L.SETTINGS_CURSORGUIDE_TITLE, L.SETTINGS_CURSORGUIDE_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, false)
 	local parentSetting = Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
 		app.SetCursorGuideVisibility()
 	end)
 
 	local variable, name, tooltip = "cursorGuideCombat", L.SETTINGS_CURSORGUIDE_COMBAT_TITLE, L.SETTINGS_CURSORGUIDE_COMBAT_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	local subSetting = Settings.CreateCheckbox(category, setting, tooltip)
-	subSetting:SetParentInitializer(parentSetting, function() return TagsTrivialTweaks_Settings["cursorGuide"] end)
+	subSetting:SetParentInitializer(parentSetting, function() return SlackersTweakSuite_Settings["cursorGuide"] end)
 	setting:SetValueChangedCallback(function()
 		app.SetCursorGuideVisibility()
 	end)
 
 	local variable, name, tooltip = "disableAlwaysCompare", L.SETTINGS_COMPARE_TITLE, L.SETTINGS_COMPARE_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
 		app.ToggleAlwaysCompare()
 	end)
 
 	local variable, name, tooltip = "backpackCount", L.SETTINGS_SPLITBAG_TITLE, L.SETTINGS_SPLITBAG_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
 		local freeSlots1 = C_Container.GetContainerNumFreeSlots(0) + C_Container.GetContainerNumFreeSlots(1) + C_Container.GetContainerNumFreeSlots(2) + C_Container.GetContainerNumFreeSlots(3) + C_Container.GetContainerNumFreeSlots(4)
 		local freeSlots2 = C_Container.GetContainerNumFreeSlots(5)
 
-		if TagsTrivialTweaks_Settings["backpackCount"] and C_Container.GetContainerNumSlots(5) ~= 0 then
+		if SlackersTweakSuite_Settings["backpackCount"] and C_Container.GetContainerNumSlots(5) ~= 0 then
 			MainMenuBarBackpackButtonCount:SetText("(" .. freeSlots1 .. "+" .. freeSlots2 .. ")")
 		else
 			MainMenuBarBackpackButtonCount:SetText("(" .. freeSlots1 + freeSlots2 .. ")")
@@ -133,25 +132,25 @@ function app.Settings()
 	end)
 
 	local variable, name, tooltip = "queueSound", L.SETTINGS_QUEUESOUND_TITLE, L.SETTINGS_QUEUESOUND_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, false)
 	Settings.CreateCheckbox(category, setting, tooltip)
 
 	local variable, name, tooltip = "showTokenPrice", L.SETTINGS_SHOWTOKENPRICE_TITLE, L.SETTINGS_SHOWTOKENPRICE_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 
 	local variable, name, tooltip = "tokyoDrift", L.SETTINGS_TOKYODRIFT_TITLE, L.SETTINGS_TOKYODRIFT_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, false)
 	Settings.CreateCheckbox(category, setting, tooltip)
 
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.ADDONS))
 
 	local variable, name, tooltip = "handyNotes", L.SETTINGS_HANDYNOTESFIX_TITLE, L.SETTINGS_HANDYNOTESFIX_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 
 	local variable, name, tooltip = "underminePrices", L.SETTINGS_ORIBOSEXCHANGEFIX_TITLE, L.SETTINGS_ORIBOSEXCHANGEFIX_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
 		app.HideOribos()
@@ -160,7 +159,7 @@ function app.Settings()
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.HOLIDAYS))
 
 	local variable, name, tooltip = "candySit", L.SETTINGS_HALLOWSIT_TITLE, L.SETTINGS_HALLOWSIT_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
+	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 end
 

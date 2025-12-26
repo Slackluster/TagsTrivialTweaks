@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: esES.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: esES.lua --
+-------------------------------------
 -- Spanish (Spain) localisation
 -- Translator(s):
 

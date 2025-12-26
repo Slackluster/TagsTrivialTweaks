@@ -1,6 +1,6 @@
------------------------------------
--- Tag's Trivial Tweaks: Fun.lua --
------------------------------------
+------------------------------------
+-- Slacker's Tweak Suite: Fun.lua --
+------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -10,7 +10,7 @@ local appName, app = ...
 -----------------
 
 app.Event:Register("UNIT_POWER_UPDATE", function(unitTarget, powerType)
-	if TagsTrivialTweaks_Settings["tokyoDrift"] then
+	if SlackersTweakSuite_Settings["tokyoDrift"] then
 		local function hasBuff(spellID)
 			for i = 1, 40 do
 				local aura = C_UnitAuras.GetBuffDataByIndex("player", i)
@@ -28,7 +28,7 @@ app.Event:Register("UNIT_POWER_UPDATE", function(unitTarget, powerType)
 		if unitTarget == "player" and powerType == "ALTERNATE" and hasBuff(460013) then
 			if not app.TDHandle then
 				local _
-				_, app.TDHandle = PlaySoundFile("Interface\\AddOns\\TagsTrivialTweaks\\assets\\TokyoDrift.ogg", "Master")
+				_, app.TDHandle = PlaySoundFile("Interface\\AddOns\\SlackersTweakSuite\\assets\\TokyoDrift.ogg", "Master")
 			end
 
 			app.TDLastPlayTime = GetTime()

@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: zhTW.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: zhTW.lua --
+-------------------------------------
 -- Chinese (Traditional, Taiwan) localisation
 -- Translator(s):
 

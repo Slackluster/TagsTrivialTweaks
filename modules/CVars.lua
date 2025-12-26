@@ -1,6 +1,6 @@
--------------------------------------
--- Tag's Trivial Tweaks: CVars.lua --
--------------------------------------
+--------------------------------------
+-- Slacker's Tweak Suite: CVars.lua --
+--------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -20,7 +20,7 @@ end)
 -----------------
 
 function app.ToggleAlwaysCompare()
-	if TagsTrivialTweaks_Settings["disableAlwaysCompare"] then
+	if SlackersTweakSuite_Settings["disableAlwaysCompare"] then
 		SetCVar("alwaysCompareItems", "0")
 	else
 		SetCVar("alwaysCompareItems", "1")

@@ -1,5 +1,5 @@
 --------------------------------------
--- Tag's Trivial Tweaks: Queue.lua --
+-- Slacker's Tweak Suite: Queue.lua --
 --------------------------------------
 
 -- Initialisation
@@ -10,7 +10,7 @@ local appName, app = ...
 -----------------
 
 function app.QueueSound()
-	if TagsTrivialTweaks_Settings["queueSound"] then
+	if SlackersTweakSuite_Settings["queueSound"] then
 		PlaySoundFile(567478, "Master")
 	end
 end

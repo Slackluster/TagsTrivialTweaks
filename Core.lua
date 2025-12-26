@@ -1,12 +1,12 @@
-------------------------------------
--- Tag's Trivial Tweaks: Core.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: Core.lua --
+-------------------------------------
 
 -- Initialisation
 local appName, app = ...	-- Returns the addon name and a unique table
 app.locales = {}
 app.api = {}
-TagsTrivialTweaks = app.api
+SlackersTweakSuite = app.api
 
 ---------------------------
 -- WOW API EVENT HANDLER --
@@ -47,21 +47,21 @@ end
 
 function app.SendAddonMessage(message)
 	if IsInRaid(2) or IsInGroup(2) then
-		ChatThrottleLib:SendAddonMessage("NORMAL", "TagsTrivTweaks", message, "INSTANCE_CHAT")
+		ChatThrottleLib:SendAddonMessage("NORMAL", "SlackTweakSuite", message, "INSTANCE_CHAT")
 	elseif IsInRaid() then
-		ChatThrottleLib:SendAddonMessage("NORMAL", "TagsTrivTweaks", message, "RAID")
+		ChatThrottleLib:SendAddonMessage("NORMAL", "SlackTweakSuite", message, "RAID")
 	elseif IsInGroup() then
-		ChatThrottleLib:SendAddonMessage("NORMAL", "TagsTrivTweaks", message, "PARTY")
+		ChatThrottleLib:SendAddonMessage("NORMAL", "SlackTweakSuite", message, "PARTY")
 	end
 end
 
 app.Event:Register("GROUP_ROSTER_UPDATE", function(category, partyGUID)
-	local message = "version:" .. C_AddOns.GetAddOnMetadata("TagsTrivialTweaks", "Version")
+	local message = "version:" .. C_AddOns.GetAddOnMetadata("SlackersTweakSuite", "Version")
 	app.SendAddonMessage(message)
 end)
 
 app.Event:Register("CHAT_MSG_ADDON", function(prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID)
-	if prefix == "TagsTrivTweaks" then
+	if prefix == "SlackTweakSuite" then
 		local version = text:match("version:(.+)")
 		if version then
 			if version ~= "@project-version@" then
@@ -72,7 +72,7 @@ app.Event:Register("CHAT_MSG_ADDON", function(prefix, text, channel, sender, tar
 				local otherGameVersion = tonumber(expansion .. major .. minor)
 				local otherAddonVersion = tonumber(iteration)
 
-				local localVersion = C_AddOns.GetAddOnMetadata("TagsTrivialTweaks", "Version")
+				local localVersion = C_AddOns.GetAddOnMetadata("SlackersTweakSuite", "Version")
 				if localVersion ~= "@project-version@" then
 					expansion, major, minor, iteration = localVersion:match("v(%d+)%.(%d+)%.(%d+)%-(%d%d%d)")
 					expansion = string.format("%02d", expansion)

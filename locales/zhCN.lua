@@ -1,6 +1,6 @@
-------------------------------------
--- Tag's Trivial Tweaks: zhCN.lua --
-------------------------------------
+-------------------------------------
+-- Slacker's Tweak Suite: zhCN.lua --
+-------------------------------------
 -- Chinese (Simplified, PRC) localisation
 -- Translator(s): cikichen
 

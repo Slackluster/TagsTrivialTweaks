@@ -1,6 +1,6 @@
-----------------------------------------
--- Tag's Trivial Tweaks: Backpack.lua --
-----------------------------------------
+-----------------------------------------
+-- Slacker's Tweak Suite: Backpack.lua --
+-----------------------------------------
 
 -- Initialisation
 local appName, app = ...
@@ -10,15 +10,15 @@ local appName, app = ...
 ----------------------
 
 app.Event:Register("PLAYER_ENTERING_WORLD", function(isInitialLogin, isReloadingUi)
-	if TagsTrivialTweaks_Settings["backpackCleanup"] == 1 then
+	if SlackersTweakSuite_Settings["backpackCleanup"] == 1 then
 		C_Container.SetSortBagsRightToLeft(false)
-	elseif TagsTrivialTweaks_Settings["backpackCleanup"] == 2 then
+	elseif SlackersTweakSuite_Settings["backpackCleanup"] == 2 then
 		C_Container.SetSortBagsRightToLeft(true)
 	end
 
-	if TagsTrivialTweaks_Settings["backpackLoot"] == 1 then
+	if SlackersTweakSuite_Settings["backpackLoot"] == 1 then
 		C_Container.SetInsertItemsLeftToRight(true)
-	elseif TagsTrivialTweaks_Settings["backpackLoot"] == 2 then
+	elseif SlackersTweakSuite_Settings["backpackLoot"] == 2 then
 		C_Container.SetInsertItemsLeftToRight(false)
 	end
 end)
@@ -29,7 +29,7 @@ end)
 
 app.Event:Register("BAG_UPDATE_DELAYED", function()
 	if not InCombatLockdown() then
-		if TagsTrivialTweaks_Settings["backpackCount"] then
+		if SlackersTweakSuite_Settings["backpackCount"] then
 			local freeSlots1 = C_Container.GetContainerNumFreeSlots(0) + C_Container.GetContainerNumFreeSlots(1) + C_Container.GetContainerNumFreeSlots(2) + C_Container.GetContainerNumFreeSlots(3) + C_Container.GetContainerNumFreeSlots(4)
 			local freeSlots2 = C_Container.GetContainerNumFreeSlots(5)
 
