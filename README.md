@@ -14,7 +14,6 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Disable HandyNotes Alt+RMB: Let TTT disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
 - Fix Oribos Exchange Tooltip: Let TTT simplify and fix the tooltip provided by the Oribos Exchange addon.
 - [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
-- [Legion Remix] Artifact Button: Show an extra action button for your artifact ability. Movable through Edit Mode.
 
 ![](https://media.forgecdn.net/attachments/1355/53/spike-gif.gif)
 
