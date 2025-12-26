@@ -15,8 +15,6 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Fix Oribos Exchange Tooltip: Let TTT simplify and fix the tooltip provided by the Oribos Exchange addon.
 - [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
 
-![](https://media.forgecdn.net/attachments/1355/53/spike-gif.gif)
-
 ## If you are experiencing issues
 - If you run into any issues or if you have other feedback, feel free to join the [Discord](https://discord.gg/FwWZZ39kPX) and ask in the `#tags-trivial-tweaks` channel, or create a [ticket on GitHub](https://github.com/Slackluster/TagsTrivialTweaks/issues). :)
 
