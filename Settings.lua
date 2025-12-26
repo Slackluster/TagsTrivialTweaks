@@ -16,6 +16,10 @@ app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 
 		app.CreateLinkCopiedFrame()
 		app.Settings()
+
+		-- Midnight cleanup
+		if TagsTrivialTweaks_Settings.LEM then TagsTrivialTweaks_Settings.LEM = nil end
+		if TagsTrivialTweaks_Settings["artifactButton"] then TagsTrivialTweaks_Settings["artifactButton"] = nil end
 	end
 end)
 
@@ -158,15 +162,6 @@ function app.Settings()
 	local variable, name, tooltip = "candySit", L.SETTINGS_HALLOWSIT_TITLE, L.SETTINGS_HALLOWSIT_TOOLTIP
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
-
-	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.REMIX))
-
-	local variable, name, tooltip = "artifactButton", L.SETTINGS_ARTIFACTBUTTON_TITLE, L.SETTINGS_ARTIFACTBUTTON_TOOLTIP
-	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, TagsTrivialTweaks_Settings, Settings.VarType.Boolean, name, false)
-	Settings.CreateCheckbox(category, setting, tooltip)
-	setting:SetValueChangedCallback(function()
-		app.RemixArtifactButton()
-	end)
 end
 
 function app.CreateLinkCopiedFrame()

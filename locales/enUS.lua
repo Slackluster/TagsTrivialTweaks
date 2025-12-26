@@ -15,22 +15,8 @@ L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/
 -- Version comms
 L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
 
--- Edit Mode
-L.SCALE = 								"Scale"
-L.VISIBLE_OUT_COMBAT = 					"Visible Out of Combat"
-
 -- Tooltip
 L.REGION =								"Region"	-- Preceded by an abbreviated region name such as "EU" or "US"
-
--- Remix: Artifact Button
-L.ARTIFACT_FRAME =						"[TTT] Artifact Ability"
-L.STYLE =								"Style"
-L.STORM =								RELIC_SLOT_TYPE_WIND
-L.AIR =									"Air"
-L.FIRE =								DAMAGE_SCHOOL3
-L.GENERIC =								"Generic"
-L.WATER =								RELIC_SLOT_TYPE_WATER
-L.GARRISON =							GARRISON_LOCATION_TOOLTIP
 
 -- Settings
 L.SETTINGS_SUPPORT_TEXTLONG =			"Developing this addon takes a significant amount of time and effort.\nPlease consider financially supporting the developer."
@@ -72,6 +58,3 @@ L.SETTINGS_ORIBOSEXCHANGEFIX_TOOLTIP =	"Let " .. app.NameShort .. " simplify and
 L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
 L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
 L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."
-L.REMIX = 								"Remix"
-L.SETTINGS_ARTIFACTBUTTON_TITLE =		"[Legion] Artifact Button"
-L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Show an extra action button for your artifact ability. Movable through Edit Mode."

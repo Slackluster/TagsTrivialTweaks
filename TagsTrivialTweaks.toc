@@ -35,7 +35,6 @@ modules\Fun.lua
 modules\Holidays.lua
 modules\OtherAddons.lua
 modules\Queue.lua
-modules\Remix.lua
 modules\Tooltip.lua
 locales\enUS.lua
 locales\deDE.lua

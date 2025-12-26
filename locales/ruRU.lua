@@ -15,22 +15,8 @@ L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Использ�
 -- Version comms
 L.NEW_VERSION_AVAILABLE =				"Доступна более новая версия " .. app.NameLong .. " аддона:"
 
--- Edit Mode
-L.SCALE = 								"Масштаб"
-L.VISIBLE_OUT_COMBAT = 					"Видимость вне боя"
-
 -- Tooltip
 L.REGION =								"Регион"	-- Preceded by an abbreviated region name such as "EU" or "US"
-
--- Remix: Artifact Button
-L.ARTIFACT_FRAME =						"[TTT] Способность артефакта"
-L.STYLE =								"Стиль"
-L.STORM =								RELIC_SLOT_TYPE_WIND
-L.AIR =									"Воздух"
-L.FIRE =								DAMAGE_SCHOOL3
-L.GENERIC =								"Общий"
-L.WATER =								RELIC_SLOT_TYPE_WATER
-L.GARRISON =							GARRISON_LOCATION_TOOLTIP
 
 -- Settings
 L.SETTINGS_SUPPORT_TEXTLONG =			"Разработка этого аддона требует значительного времени и усилий.\nПожалуйста, рассмотрите возможность финансовой поддержки разработчика."
@@ -72,6 +58,3 @@ L.SETTINGS_ORIBOSEXCHANGEFIX_TOOLTIP =	"Позвольте " .. app.NameShort ..
 L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
 L.SETTINGS_HALLOWSIT_TITLE =			"[Тыквовин] Без уловок"
 L.SETTINGS_HALLOWSIT_TOOLTIP =			"Сядьте, прежде чем выполнять задание «Кулек конфет», чтобы не дать себя обмануть и успокоить."
-L.REMIX = 								"Remix"
-L.SETTINGS_ARTIFACTBUTTON_TITLE =		"Кнопка артефакта"
-L.SETTINGS_ARTIFACTBUTTON_TOOLTIP =		"Показывать дополнительную кнопку действия для способности вашего артефакта. Перемещаема через режим редактирования."
