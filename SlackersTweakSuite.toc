@@ -21,6 +21,7 @@
 ## Category-zhCN: 用户界面
 ## Category-zhTW: 使用者介面
 
+libs\ChatThrottleLib\ChatThrottleLib.xml
 libs\LibBattlePetTooltipLine\LibStub\LibStub.lua
 libs\LibBattlePetTooltipLine\LibBattlePetTooltipLine.lua
 Core.lua
