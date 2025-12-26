@@ -15,8 +15,10 @@ local L = app.locales
 -- Version comms
 -- L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
 
--- Tooltip
+-- UI
 -- L.REGION =								"Region"	-- Preceded by an abbreviated region name such as "EU" or "US"
+-- L.INSTANT_BUTTON =						"Get it now!"
+-- L.INSTANT_TOOLTIP =						"Hold Shift to instantly receive your item and skip the 5 second timer."
 
 -- Settings
 L.SETTINGS_SUPPORT_TEXTLONG =			"Le développement de cette extension demande beaucoup de temps et d’efforts.\nVeuillez envisager de soutenir financièrement le développeur."
@@ -42,6 +44,16 @@ L.SETTINGS_SPLITBAG_TITLE =				"Nombre de composants dans les sacs"
 L.SETTINGS_SPLITBAG_TOOLTIP =			"Affiche les emplacements libres de vos sacs et sac de composants séparément au-dessus de l’icône du sac à dos."
 L.SETTINGS_QUEUESOUND_TITLE =			"Jouer un son pour la file d’attente"
 -- L.SETTINGS_QUEUESOUND_TOOLTIP =			"Play the queue sound on the Master channel when any queue pops, including battlegrounds and pet battles."
+-- L.SETTINGS_CATALYST =					"Instant Catalyst"
+-- L.SETTINGS_CATALYST_DESC =				"Hold Shift to instantly catalyze an item, skipping the 5 second timer."
+-- L.SETTINGS_VAULT =						"Instant Great Vault"
+-- L.SETTINGS_VAULT_DESC =					"Hold Shift to instantly receive your reward from the Great Vault and skip the 5 second timer."
+-- L.SETTINGS_INSTANT_TOOLTIP =			"Show tooltip"
+-- L.SETTINGS_INSTANT_TOOLTIP_DESC =		"Show the tooltip explaining how this feature works. The button text still changes when this is disabled."
+-- L.SETTINGS_VENDOR_ALL =					"Disable Vendor Filter"
+-- L.SETTINGS_VENDOR_ALL_DESC =			"Automatically set all vendor filters to |cffFFFFFFAll|r to display items normally not shown to your class."
+-- L.SETTINGS_HIDE_LOOT_ROLL_WINDOW =		"Hide loot roll window"
+-- L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC =	"Hide the window that shows loot rolls and their results. You can show the window again with |cff00ccff/loot|r."
 L.SETTINGS_SHOWTOKENPRICE_TITLE =		"Afficher le prix du jeton WoW"
 L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Afficher le prix actuel du jeton WoW dans l'infobulle de l'objet « Jeton WoW »."
 L.SETTINGS_TOKYODRIFT_TITLE = 			"Tokyo Drift"

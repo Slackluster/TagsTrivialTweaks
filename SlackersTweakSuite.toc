@@ -32,6 +32,7 @@ modules\Cursor.lua
 modules\CVars.lua
 modules\Fun.lua
 modules\Holidays.lua
+modules\Loot.lua
 modules\OtherAddons.lua
 modules\Queue.lua
 modules\Tooltip.lua
