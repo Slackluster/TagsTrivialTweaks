@@ -23,7 +23,6 @@
 
 libs\LibBattlePetTooltipLine\LibStub\LibStub.lua
 libs\LibBattlePetTooltipLine\LibBattlePetTooltipLine.lua
-libs\LibEditMode\embed.xml
 Core.lua
 Database.lua
 Settings.lua
