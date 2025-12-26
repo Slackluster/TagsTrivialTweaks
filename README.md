@@ -1,7 +1,8 @@
 # Slacker's Tweak Suite
 A World of Warcraft addon. Download locations: [CurseForge](https://www.curseforge.com/wow/addons/slackers-tweak-suite) | [Wago](https://addons.wago.io/addons/sts)
 
-# Description
+[![](https://media.forgecdn.net/attachments/1439/398/buymeacoffee-png.png)](https://www.buymeacoffee.com/Slackluster)
+
 **Slacker's Tweak Suite** is a collection of QoL tweaks.
 
 **Features**
@@ -20,7 +21,5 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
 
 ## If you are experiencing issues
+- Check if the issue occurs with only this addon enabled, or if the issue is a feature you can disable from the addon's settings menu.
 - If you run into any issues or if you have other feedback, feel free to join the [Discord](https://discord.gg/FwWZZ39kPX) and ask in the `#slackers-tweak-suite` channel, or create a [ticket on GitHub](https://github.com/Slackluster/SlackersTweakSuite/issues). :)
-
-## Support me, if you want 👉👈😳
-[![](https://i.imgur.com/qGoTtXm.png)](https://www.buymeacoffee.com/SlacklusterYT)
