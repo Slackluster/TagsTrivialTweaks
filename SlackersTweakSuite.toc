@@ -1,5 +1,5 @@
 ## Interface: 120000
-## Title: |cffC69B6DSlacker's Tweak Suite|r
+## Title: |cff3FC7EBSlacker's Tweak Suite|r
 ## Author: Slackluster
 ## IconTexture: Interface\AddOns\SlackersTweakSuite\assets\sts_icon.blp
 ## Version: @project-version@

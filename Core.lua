@@ -38,7 +38,7 @@ end)
 ----------------------
 
 function app.Colour(string)
-	return "|cffC69B6D" .. string .. "|r"
+	return "|cff3FC7EB" .. string .. "|r"
 end
 
 -------------------
