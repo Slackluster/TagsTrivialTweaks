@@ -1,7 +1,7 @@
 ## Interface: 120000
 ## Title: |cff3FC7EBSlacker's Tweak Suite|r
 ## Author: Slackluster
-## IconTexture: Interface\AddOns\SlackersTweakSuite\assets\sts_icon.blp
+## IconTexture: Interface\AddOns\SlackersTweakSuite\assets\icon.png
 ## Version: @project-version@
 ## X-Curse-Project-ID: 1362599
 ## X-Wago-ID: x61zryK1
