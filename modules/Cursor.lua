@@ -11,8 +11,8 @@ local appName, app = ...
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
-		app.CreateCursorGuide()
-		app.SetCursorGuideVisibility()
+		app:CreateCursorGuide()
+		app:SetCursorGuideVisibility()
 	end
 end)
 
@@ -21,7 +21,7 @@ end)
 ------------------
 -- This feature is recreated from a WeakAura whose author I can't verify, and uses a texture taken from the WeakAuras addon: Square_AlphaGradient.tga
 
-function app.CreateCursorGuide()
+function app:CreateCursorGuide()
 	app.CursorGuide = CreateFrame("Frame", "SlackersTweakSuiteCursorGuide", UIParent)
 	app.CursorGuide:SetFrameStrata("HIGH")
 
@@ -57,7 +57,7 @@ function app.CreateCursorGuide()
 	CreateCursorGradient(vertical, width, { angle = math.pi / 2, pivot = pivotRight })
 end
 
-function app.SetCursorGuideVisibility()
+function app:SetCursorGuideVisibility()
 	if InCombatLockdown() then return end
 
 	RegisterAttributeDriver(app.CursorGuide, "state-visibility", "[combat] hide; hide")

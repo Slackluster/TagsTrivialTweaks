@@ -37,7 +37,7 @@ end)
 -- HELPER FUNCTIONS --
 ----------------------
 
-function app.Colour(string)
+function app:Colour(string)
 	return "|cff3FC7EB" .. string .. "|r"
 end
 
@@ -57,9 +57,9 @@ app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 			local command, rest = msg:match("^(%S*)%s*(.-)$")
 
 			if command == "settings" then
-				app.OpenSettings()
+				app:OpenSettings()
 			else
-				app.Print(L.INVALID_COMMAND)
+				app:Print(L.INVALID_COMMAND)
 			end
 		end
 	end
@@ -69,7 +69,7 @@ end)
 -- VERSION COMMS --
 -------------------
 
-function app.SendAddonMessage(message)
+function app:SendAddonMessage(message)
 	if IsInRaid(2) or IsInGroup(2) then
 		ChatThrottleLib:SendAddonMessage("NORMAL", "SlackTweakSuite", message, "INSTANCE_CHAT")
 	elseif IsInRaid() then
@@ -81,7 +81,7 @@ end
 
 app.Event:Register("GROUP_ROSTER_UPDATE", function(category, partyGUID)
 	local message = "version:" .. C_AddOns.GetAddOnMetadata("SlackersTweakSuite", "Version")
-	app.SendAddonMessage(message)
+	app:SendAddonMessage(message)
 end)
 
 app.Event:Register("CHAT_MSG_ADDON", function(prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID)
@@ -107,7 +107,7 @@ app.Event:Register("CHAT_MSG_ADDON", function(prefix, text, channel, sender, tar
 
 					if otherGameVersion > localGameVersion or (otherGameVersion == localGameVersion and otherAddonVersion > localAddonVersion) then
 						if GetServerTime() - app.Flag.VersionCheck > 600 then
-							app.Print(L.NEW_VERSION_AVAILABLE, version)
+							app:Print(L.NEW_VERSION_AVAILABLE, version)
 							app.Flag.VersionCheck = GetServerTime()
 						end
 					end

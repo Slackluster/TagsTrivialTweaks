@@ -17,8 +17,8 @@ app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 		-- Midnight cleanup
 		if TagsTrivialTweaks_Settings ~= nil then TagsTrivialTweaks_Settings = nil end
 
-		app.CreateLinkCopiedFrame()
-		app.Settings()
+		app:CreateLinkCopiedFrame()
+		app:CreateSettings()
 	end
 end)
 
@@ -26,15 +26,15 @@ end)
 -- SETTINGS --
 --------------
 
-function app.OpenSettings()
-	Settings.OpenToCategory(app.Category:GetID())
+function app:OpenSettings()
+	Settings.OpenToCategory(app.Settings:GetID())
 end
 
 -- Settings
-function app.Settings()
+function app:CreateSettings()
 	local category, layout = Settings.RegisterVerticalLayoutCategory(app.Name)
 	Settings.RegisterAddOnCategory(category)
-	app.Category = category
+	app.Settings = category
 
 	SlackersTweakSuite_SettingsTextMixin = {}
 	function SlackersTweakSuite_SettingsTextMixin:Init(initializer)
@@ -166,7 +166,7 @@ function app.Settings()
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, false)
 	local parentSetting = Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
-		app.SetCursorGuideVisibility()
+		app:SetCursorGuideVisibility()
 	end)
 
 	local variable, name, tooltip = "cursorGuideCombat", L.SETTINGS_CURSORGUIDE_COMBAT_TITLE, L.SETTINGS_CURSORGUIDE_COMBAT_TOOLTIP
@@ -174,14 +174,14 @@ function app.Settings()
 	local subSetting = Settings.CreateCheckbox(category, setting, tooltip)
 	subSetting:SetParentInitializer(parentSetting, function() return SlackersTweakSuite_Settings["cursorGuide"] end)
 	setting:SetValueChangedCallback(function()
-		app.SetCursorGuideVisibility()
+		app:SetCursorGuideVisibility()
 	end)
 
 	local variable, name, tooltip = "disableAlwaysCompare", L.SETTINGS_COMPARE_TITLE, L.SETTINGS_COMPARE_TOOLTIP
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
-		app.ToggleAlwaysCompare()
+		app:ToggleAlwaysCompare()
 	end)
 
 	local variable, name, tooltip = "backpackCount", L.SETTINGS_SPLITBAG_TITLE, L.SETTINGS_SPLITBAG_TOOLTIP
@@ -246,7 +246,7 @@ function app.Settings()
 	local setting = Settings.RegisterAddOnSetting(category, appName .. "_" .. variable, variable, SlackersTweakSuite_Settings, Settings.VarType.Boolean, name, true)
 	Settings.CreateCheckbox(category, setting, tooltip)
 	setting:SetValueChangedCallback(function()
-		app.HideOribos()
+		app:HideOribosMessage()
 	end)
 
 	layout:AddInitializer(CreateSettingsListSectionHeaderInitializer(L.HOLIDAYS))
@@ -256,7 +256,7 @@ function app.Settings()
 	Settings.CreateCheckbox(category, setting, tooltip)
 end
 
-function app.CreateLinkCopiedFrame()
+function app:CreateLinkCopiedFrame()
 	app.LinkCopiedFrame= CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
 	app.LinkCopiedFrame:SetPoint("CENTER")
 	app.LinkCopiedFrame:SetFrameStrata("TOOLTIP")

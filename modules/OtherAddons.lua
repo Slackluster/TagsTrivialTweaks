@@ -12,9 +12,9 @@ local L = app.locales
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
-		app.DisableHandyNotesAltRMB()
-		app.UnderminePrices()
-		app.HideOribos()
+		app:DisableHandyNotesAltRMB()
+		app:FixUnderminePrices()
+		app:HideOribosMessage()
 	end
 end)
 
@@ -22,7 +22,7 @@ end)
 -- HANDYNOTES ALT+RMB FIX --
 ----------------------------
 
-function app.DisableHandyNotesAltRMB()
+function app:DisableHandyNotesAltRMB()
 	if SlackersTweakSuite_Settings["handyNotes"] then
 		-- Thank you for this code, Numy, this saves me a lot of frustration
 		if C_AddOns.IsAddOnLoaded("HandyNotes") and LibStub("AceAddon-3.0"):GetAddon("HandyNotes") then
@@ -38,7 +38,7 @@ end
 -- UNDERMINE PRICES --
 ----------------------
 
-function app.UnderminePrices()
+function app:FixUnderminePrices()
 	local function OnTooltipSetItem(tooltip)
 		local itemLink, itemID, secondaryItemLink, secondaryItemID
 		local _, primaryItemLink, primaryItemID = TooltipUtil.GetDisplayedItem(GameTooltip)
@@ -167,7 +167,7 @@ hooksecurefunc("BattlePetToolTip_Show", function(...)
 	end
 end)
 
-function app.HideOribos()
+function app:HideOribosMessage()
 	if SlackersTweakSuite_Settings["underminePrices"] then
 		if C_AddOns.IsAddOnLoaded("OribosExchange") then
 			OETooltip(false)

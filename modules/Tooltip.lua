@@ -11,7 +11,7 @@ local appName, app = ...
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
-		app.TokenPrice()
+		app:ShowTokenPrice()
 	end
 end)
 
@@ -19,7 +19,7 @@ end)
 -- TOKEN PRICE --
 -----------------
 
-function app.TokenPrice()
+function app:ShowTokenPrice()
 	local function OnTooltipSetItem(tooltip, data)
 		local _, _, itemID = TooltipUtil.GetDisplayedItem(tooltip)
 

@@ -11,7 +11,7 @@ local appName, app = ...
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
-		app.ToggleAlwaysCompare()
+		app:ToggleAlwaysCompare()
 	end
 end)
 
@@ -19,7 +19,7 @@ end)
 -- Token price --
 -----------------
 
-function app.ToggleAlwaysCompare()
+function app:ToggleAlwaysCompare()
 	if SlackersTweakSuite_Settings["disableAlwaysCompare"] then
 		SetCVar("alwaysCompareItems", "0")
 	else
