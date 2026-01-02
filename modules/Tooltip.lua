@@ -16,11 +16,11 @@ app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 end)
 
 -----------------
--- Token price --
+-- TOKEN PRICE --
 -----------------
 
 function app.TokenPrice()
-	local function OnTooltipSetItem(tooltip)
+	local function OnTooltipSetItem(tooltip, data)
 		local _, _, itemID = TooltipUtil.GetDisplayedItem(tooltip)
 
 		if SlackersTweakSuite_Settings["showTokenPrice"] then
