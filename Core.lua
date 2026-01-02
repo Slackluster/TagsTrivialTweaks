@@ -41,6 +41,30 @@ function app.Colour(string)
 	return "|cff3FC7EB" .. string .. "|r"
 end
 
+-------------
+-- ON LOAD --
+-------------
+
+app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
+	if addOnName == appName then
+		C_ChatInfo.RegisterAddonMessagePrefix("SlackTweakSuite")
+
+		SLASH_RELOADUI1 = "/rl"
+		SlashCmdList.RELOADUI = ReloadUI
+
+		SLASH_SlackersTweakSuite1 = "/sts"
+		function SlashCmdList.SlackersTweakSuite(msg, editBox)
+			local command, rest = msg:match("^(%S*)%s*(.-)$")
+
+			if command == "settings" then
+				app.OpenSettings()
+			else
+				app.Print(L.INVALID_COMMAND)
+			end
+		end
+	end
+end)
+
 -------------------
 -- VERSION COMMS --
 -------------------

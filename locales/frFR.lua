@@ -12,6 +12,9 @@ local L = app.locales
 -- General
 L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Faites |cffFFFFFF/reload|r ou |cffFFFFFF/rl|r ou reconnectez-vous."
 
+-- Slash commands
+L.INVALID_COMMAND =						"Commande non valide."
+
 -- Version comms
 L.NEW_VERSION_AVAILABLE =				"Une nouvelle version de " .. app.NameLong .. " est disponible :"
 
@@ -21,6 +24,7 @@ L.NEW_VERSION_AVAILABLE =				"Une nouvelle version de " .. app.NameLong .. " est
 -- L.INSTANT_TOOLTIP =						"Hold Shift to instantly receive your item and skip the 5 second timer."
 
 -- Settings
+-- L.SETTINGS_VERSION =					GAME_VERSION_LABEL .. ":"	-- "Version"
 L.SETTINGS_SUPPORT_TEXTLONG =			"Le développement de cette extension demande beaucoup de temps et d’efforts.\nVeuillez envisager de soutenir financièrement le développeur."
 L.SETTINGS_SUPPORT_TEXT =				"Soutien"
 L.SETTINGS_SUPPORT_BUTTON =				"Buy Me a Coffee"	-- Brand name, if there isn't a localised version, keep it the way it is
@@ -34,6 +38,10 @@ L.SETTINGS_ISSUES_DESC =				"Consultez le système de suivi des problèmes (« I
 L.SETTINGS_URL_COPY =					"Ctrl + C pour copier :"
 L.SETTINGS_URL_COPIED =					"Lien copié dans le presse-papiers"
 
+L.SETTINGS_KEYSLASH_TITLE =				SETTINGS_KEYBINDINGS_LABEL .. " & Commandes « Slash »"	-- "Keybindings"
+L.SETTINGS_SLASH_SETTINGS =				"Ouvrir les paramètres"
+
+-- L.GENERAL =								GENERAL	-- "General"
 -- L.SETTINGS_CURSORGUIDE_TITLE =			"Cursor Guide"
 -- L.SETTINGS_CURSORGUIDE_TOOLTIP =		"Show a guide around the cursor to help you keep track of it."
 -- L.SETTINGS_CURSORGUIDE_COMBAT_TITLE =	"Only In Combat"
@@ -58,6 +66,7 @@ L.SETTINGS_SHOWTOKENPRICE_TITLE =		"Afficher le prix du jeton WoW"
 L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Afficher le prix actuel du jeton WoW dans l'infobulle de l'objet « Jeton WoW »."
 L.SETTINGS_TOKYODRIFT_TITLE = 			"Tokyo Drift"
 L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Vroom vroom."
+
 -- L.ADDONS = 								ADDONS
 L.SETTINGS_HANDYNOTESFIX_TITLE =		"Désactiver HandyNotes Alt " .. app.IconRMB
 L.SETTINGS_HANDYNOTESFIX_TOOLTIP =		"Permettre à " .. app.NameShort .. " de désactiver le raccourci clavier d’HandyNotes sur la carte, en le réactivant pour les points de passages TomTom à la place.\n\n" .. L.REQUIRES_RELOAD
@@ -67,6 +76,7 @@ L.SETTINGS_ORIBOSEXCHANGEFIX_TOOLTIP =	app.NameShort .. " simplifie et corrige l
 										"- Corrige les prix des recettes\n" ..
 										"- Corrige les prix dans la fenêtre des professions\n" ..
 										"- Affiche les prix des mascottes de combat dans l’info-bulle existante"
+
 -- L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
 -- L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
 -- L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."

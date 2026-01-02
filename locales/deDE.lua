@@ -12,6 +12,9 @@ local L = app.locales
 -- General
 -- L.REQUIRES_RELOAD =						"|cffFF0000" .. REQUIRES_RELOAD .. ".|r Use |cffFFFFFF/reload|r or relog."	-- "Requires Reload"
 
+-- Slash commands
+-- L.INVALID_COMMAND =						"Invalid command."
+
 -- Version comms
 -- L.NEW_VERSION_AVAILABLE =				"There is a newer version of " .. app.NameLong .. " available:"
 
@@ -21,6 +24,7 @@ local L = app.locales
 -- L.INSTANT_TOOLTIP =						"Hold Shift to instantly receive your item and skip the 5 second timer."
 
 -- Settings
+-- L.SETTINGS_VERSION =					GAME_VERSION_LABEL .. ":"	-- "Version"
 -- L.SETTINGS_SUPPORT_TEXTLONG =			"Developing this addon takes a significant amount of time and effort.\nPlease consider financially supporting the developer."
 -- L.SETTINGS_SUPPORT_TEXT =				"Support"
 -- L.SETTINGS_SUPPORT_BUTTON =				"Buy Me a Coffee"	-- Brand name, if there isn't a localised version, keep it the way it is
@@ -34,6 +38,10 @@ local L = app.locales
 -- L.SETTINGS_URL_COPY =					"Ctrl+C to copy:"
 -- L.SETTINGS_URL_COPIED =					"Link copied to clipboard"
 
+-- L.SETTINGS_KEYSLASH_TITLE =				SETTINGS_KEYBINDINGS_LABEL .. " & Slash Commands"	-- "Keybindings"
+-- L.SETTINGS_SLASH_SETTINGS =				"Open the settings"
+
+-- L.GENERAL =								GENERAL	-- "General"
 -- L.SETTINGS_CURSORGUIDE_TITLE =			"Cursor Guide"
 -- L.SETTINGS_CURSORGUIDE_TOOLTIP =		"Show a guide around the cursor to help you keep track of it."
 -- L.SETTINGS_CURSORGUIDE_COMBAT_TITLE =	"Only In Combat"
@@ -58,6 +66,7 @@ local L = app.locales
 -- L.SETTINGS_SHOWTOKENPRICE_TOOLTIP =		"Show the current WoW Token price on the WoW Token item tooltip."
 -- L.SETTINGS_TOKYODRIFT_TITLE = 			"Tokyo Drift"
 -- L.SETTINGS_TOKYODRIFT_TOOLTIP = 		"Vroom vroom."
+
 -- L.ADDONS = 								ADDONS
 -- L.SETTINGS_HANDYNOTESFIX_TITLE =		"Disable HandyNotes Alt " .. app.IconRMB
 -- L.SETTINGS_HANDYNOTESFIX_TOOLTIP =		"Let " .. app.NameShort .. " disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.\n\n" .. L.REQUIRES_RELOAD
@@ -67,6 +76,7 @@ local L = app.locales
 -- 										"- Fix recipe prices.\n" ..
 -- 										"- Fix profession window prices.\n" ..
 -- 										"- Show battle pet prices inside the existing tooltip."
+
 -- L.HOLIDAYS =							CALENDAR_FILTER_HOLIDAYS
 -- L.SETTINGS_HALLOWSIT_TITLE =			"[Hallow's End] No Trick"
 -- L.SETTINGS_HALLOWSIT_TOOLTIP =			"Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified."

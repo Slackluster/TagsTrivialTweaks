@@ -21,6 +21,7 @@ local L = app.locales
 -- L.INSTANT_TOOLTIP =						"Hold Shift to instantly receive your item and skip the 5 second timer."
 
 -- Settings
+-- L.SETTINGS_VERSION =					GAME_VERSION_LABEL .. ":"	-- "Version"
 -- L.SETTINGS_SUPPORT_TEXTLONG =			"Developing this addon takes a significant amount of time and effort.\nPlease consider financially supporting the developer."
 -- L.SETTINGS_SUPPORT_TEXT =				"Support"
 -- L.SETTINGS_SUPPORT_BUTTON =				"Buy Me a Coffee"	-- Brand name, if there isn't a localised version, keep it the way it is
@@ -34,6 +35,7 @@ local L = app.locales
 -- L.SETTINGS_URL_COPY =					"Ctrl+C to copy:"
 -- L.SETTINGS_URL_COPIED =					"Link copied to clipboard"
 
+-- L.GENERAL =								GENERAL	-- "General"
 -- L.SETTINGS_CURSORGUIDE_TITLE =			"Cursor Guide"
 -- L.SETTINGS_CURSORGUIDE_TOOLTIP =		"Show a guide around the cursor to help you keep track of it."
 -- L.SETTINGS_CURSORGUIDE_COMBAT_TITLE =	"Only In Combat"

@@ -19,6 +19,7 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Disable HandyNotes Alt+RMB: Let STS disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
 - Fix Oribos Exchange Tooltip: Let STS simplify and fix the tooltip provided by the Oribos Exchange addon.
 - [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
+- Adds your current realm name to the character panel.
 
 ## If you are experiencing issues
 - Check if the issue occurs with only this addon enabled, or if the issue is a feature you can disable from the addon's settings menu.
