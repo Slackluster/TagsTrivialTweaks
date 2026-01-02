@@ -28,6 +28,7 @@ Core.lua
 Database.lua
 Settings.lua
 FrameTemplates.xml
+modules\AlwaysActive.lua
 modules\Backpack.lua
 modules\Cursor.lua
 modules\CVars.lua
