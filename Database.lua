@@ -9,6 +9,7 @@ local appName, app = ...
 app.Name = "Slacker's Tweak Suite"
 app.NameLong = app:Colour("Slacker's Tweak Suite")
 app.NameShort = app:Colour("STS")
+app.NamePrefix = "SlackTweakSuite"
 
 -- Used textures
 app.IconLMB = "|TInterface\\TutorialFrame\\UI-Tutorial-Frame:12:12:0:0:512:512:10:65:228:283|t"
