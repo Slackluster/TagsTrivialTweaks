@@ -47,6 +47,8 @@ end
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
+		app.Flag = {}
+
 		C_ChatInfo.RegisterAddonMessagePrefix("SlackTweakSuite")
 
 		SLASH_RELOADUI1 = "/rl"
