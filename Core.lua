@@ -7,6 +7,8 @@ local appName, app = ...	-- Returns the addon name and a unique table
 app.locales = {}
 app.api = {}
 SlackersTweakSuite = app.api
+local api = app.api
+local L = app.locales
 
 ---------------------------
 -- WOW API EVENT HANDLER --
@@ -39,6 +41,10 @@ end)
 
 function app:Colour(string)
 	return "|cff3FC7EB" .. string .. "|r"
+end
+
+function app:Print(...)
+	print(app.NameShort .. ":", ...)
 end
 
 -------------
