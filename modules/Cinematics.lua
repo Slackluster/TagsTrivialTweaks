@@ -27,7 +27,7 @@ function app:SkipSeenCinematics()
 		table.insert(app.Settings.cinematics[movieID], { dateTime = string.format("%d-%02d-%02d %02d:%02d", date.year, date.month, date.monthDay, date.hour, date.minute), map = C_Map.GetMapInfo(mapID).name, mapID = mapID })
 	end
 
-	local function handleMovie(movieID, source)
+	local function handleMovie(movieID, source, canCancel)
 		local mapID = C_Map.GetBestMapForUnit("player")
 		app:Debug(source)
 		if not movieID then
@@ -36,7 +36,7 @@ function app:SkipSeenCinematics()
 			local seenMap = false
 			for _, seen in ipairs(app.Settings.cinematics[movieID]) do
 				if seen.mapID == mapID then
-					app:Debug("Skipped movieID", movieID)
+					app:Debug("Skipped movieID", movieID, canCancel)
 					MovieFrame:Hide()
 					StopCinematic()
 					CancelScene()
@@ -59,7 +59,7 @@ function app:SkipSeenCinematics()
 	end)
 
 	hooksecurefunc("CinematicStarted", function(movieType, movieID, canCancel)
-		handleMovie(movieID, "CinematicStarted")
+		handleMovie(movieID, "CinematicStarted", canCancel)
 	end)
 
 	hooksecurefunc("MovieFrame_PlayMovie", function(self, movieID) -- unconfirmed
