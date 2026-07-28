@@ -45,11 +45,11 @@ function app:SkipSeenCinematics()
 				end
 			end
 			if not seenMap then
-				app:Debug("Registering movieID (new map)", movieID)
+				app:Debug("Registering movieID (new map)", movieID, canCancel)
 				C_Timer.After(2, function() registerMovie(movieID, mapID) end)
 			end
 		else
-			app:Debug("Registering movieID", movieID)
+			app:Debug("Registering movieID", movieID, canCancel)
 			C_Timer.After(2, function() registerMovie(movieID, mapID) end)
 		end
 	end
