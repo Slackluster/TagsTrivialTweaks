@@ -54,6 +54,8 @@ L.SETTINGS_INSTANT_TOOLTIP =             "Показывать подсказк�
 L.SETTINGS_INSTANT_TOOLTIP_DESC =        "Показывать подсказку, объясняющую, как работает эта функция. Текст кнопки все равно меняется, если это отключено."
 L.SETTINGS_VENDOR_ALL =                  "Отключить фильтр торговца"
 L.SETTINGS_VENDOR_ALL_DESC =             "Автоматически устанавливать все фильтры торговца на |cffFFFFFFВсе|r, чтобы отображать предметы, обычно не показываемые для вашего класса."
+
+-- L.SOUND =                                SOUND -- "Sound"
 L.SETTINGS_HIDE_LOOT_ROLL_WINDOW =       "Скрыть окно бросков лута"
 L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC =  "Скрыть окно, показывающее броски лута и их результаты. Вы можете снова показать окно с помощью |cff00ccff/loot|r."
 L.SETTINGS_QUEUESOUND_TITLE =            "Воспроизвести звук очереди"

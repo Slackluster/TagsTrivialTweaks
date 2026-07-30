@@ -56,6 +56,8 @@ L.SETTINGS_URL_COPIED =                  "Lien copié dans le presse-papiers"
 -- L.SETTINGS_INSTANT_TOOLTIP_DESC =        "Show the tooltip explaining how this feature works. The button text still changes when this is disabled."
 -- L.SETTINGS_VENDOR_ALL =                  "Disable Vendor Filter"
 -- L.SETTINGS_VENDOR_ALL_DESC =             "Automatically set all vendor filters to |cffFFFFFFAll|r to display items normally not shown to your class."
+
+-- L.SOUND =                                SOUND -- "Sound"
 -- L.SETTINGS_HIDE_LOOT_ROLL_WINDOW =       "Hide Loot Roll Window"
 -- L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC =  "Hide the window that shows loot rolls and their results. You can show the window again with |cff00ccff/loot|r."
 -- L.SETTINGS_QUEUESOUND_TITLE =            "Play Queue Sound"

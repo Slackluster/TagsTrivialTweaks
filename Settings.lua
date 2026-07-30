@@ -274,6 +274,8 @@ function app:CreateSettings()
 
 	checkbox("hideGroupRolls", L.SETTINGS_HIDE_LOOT_ROLL_WINDOW, L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC, false)
 
+	header(L.SOUND)
+
 	checkbox("queueSound", L.SETTINGS_QUEUESOUND_TITLE, L.SETTINGS_QUEUESOUND_DESC, false)
 
 	checkbox("readyCheckSound", L.SETTINGS_READYCHECKSOUND_TITLE, L.SETTINGS_READYCHECKSOUND_DESC, false)
