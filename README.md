@@ -12,7 +12,7 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Instant Catalyst: Hold Shift to instantly catalyze an item, skipping the 5 second timer.
 - Instant Great Vault: Hold Shift to instantly receive your reward from the Great Vault and skip the 5 second timer.
 - Disable Vendor Filter: Automatically set all vendor filters to All to display items normally not shown to your class.
-- Hide loot roll window: Hide the window that shows loot rolls and their results. You can show the window again with /loot.
+- Hide Loot Roll Window: Hide the window that shows loot rolls and their results. You can show the window again with /loot.
 - Play Queue Sound: Play the queue sound on the Master channel when any queue pops, including battlegrounds and pet battles.
 - Play Ready Check Sound: Play the ready check sound on the Master channel when a ready check is initiated.
 - Play Countdown Sound: Play the countdown sound on the Master channel when any countdown / pull timer is initiated.
