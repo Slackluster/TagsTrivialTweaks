@@ -67,7 +67,7 @@ L.SETTINGS_SHOWTOKENPRICE_DESC =         "Отображать текущую ц
 L.SETTINGS_TOKYODRIFT_TITLE =            "Токийский Дрифт"
 L.SETTINGS_TOKYODRIFT_DESC =             "Врум врум."
 
-L.ADDONS =                               ADDONS -- "AddOns"
+L.ADDONS =                               "Аддоны"
 L.SETTINGS_HANDYNOTESFIX_TITLE =         "Отключить HandyNotes Alt " .. app.IconRMB
 L.SETTINGS_HANDYNOTESFIX_DESC =          "Позвольте " .. app.NameShort .. " отключить привязку клавиш HandyNotes на карте, вместо этого включив ее для точек маршрута TomTom.\n\n" .. L.REQUIRES_RELOAD
 L.SETTINGS_ORIBOSEXCHANGEFIX_TITLE =     "Исправлена подсказка Oribos Exchange"

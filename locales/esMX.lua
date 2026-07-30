@@ -69,7 +69,7 @@ L.SETTINGS_URL_COPIED =                  "Enlace copiado al portapapeles"
 -- L.SETTINGS_TOKYODRIFT_TITLE =            "Tokyo Drift"
 -- L.SETTINGS_TOKYODRIFT_DESC =             "Vroom vroom."
 
--- L.ADDONS =                               ADDONS -- "AddOns"
+-- L.ADDONS =                               "Addons"
 -- L.SETTINGS_HANDYNOTESFIX_TITLE =         "Disable HandyNotes Alt " .. app.IconRMB
 -- L.SETTINGS_HANDYNOTESFIX_DESC =          "Let " .. app.NameShort .. " disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.\n\n" .. L.REQUIRES_RELOAD
 -- L.SETTINGS_ORIBOSEXCHANGEFIX_TITLE =     "Fix Oribos Exchange Tooltip"
