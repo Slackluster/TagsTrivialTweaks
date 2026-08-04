@@ -1,4 +1,4 @@
-## Interface: 120007
+## Interface: 120007, 120100
 ## Title: |cff3FC7EBSlacker's Tweak Suite|r
 ## Author: Slackluster
 ## Notes: A collection of QoL tweaks
