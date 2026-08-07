@@ -258,7 +258,7 @@ function app:CreateSettings()
 
 	checkbox("cursorGuideCombat", L.SETTINGS_CURSORGUIDE_COMBAT_TITLE, L.SETTINGS_CURSORGUIDE_COMBAT_DESC, true, function() app:SetCursorGuideVisibility() end, parentSetting, parentCheckbox)
 
-	checkbox("skipSeenCinematics", L.SETTINGS_SKIPCINEMATICS_TITLE, L.SETTINGS_SKIPCINEMATICS_TITLE_DESC, false)
+	-- checkbox("skipSeenCinematics", L.SETTINGS_SKIPCINEMATICS_TITLE .. app.IconNew, L.SETTINGS_SKIPCINEMATICS_TITLE_DESC, false)
 
 	header(L.INVENTORY)
 
@@ -286,9 +286,9 @@ function app:CreateSettings()
 
 	checkbox("queueSound", L.SETTINGS_QUEUESOUND_TITLE, L.SETTINGS_QUEUESOUND_DESC, false)
 
-	checkbox("readyCheckSound", L.SETTINGS_READYCHECKSOUND_TITLE, L.SETTINGS_READYCHECKSOUND_DESC, false)
+	checkbox("readyCheckSound", L.SETTINGS_READYCHECKSOUND_TITLE .. app.IconNew, L.SETTINGS_READYCHECKSOUND_DESC, false)
 
-	checkbox("countdownSound", L.SETTINGS_COUNTDOWNSOUND_TITLE, L.SETTINGS_COUNTDOWNSOUND_DESC, false)
+	checkbox("countdownSound", L.SETTINGS_COUNTDOWNSOUND_TITLE .. app.IconNew, L.SETTINGS_COUNTDOWNSOUND_DESC, false)
 
 	checkbox("tokyoDrift", L.SETTINGS_TOKYODRIFT_TITLE, L.SETTINGS_TOKYODRIFT_DESC, false)
 

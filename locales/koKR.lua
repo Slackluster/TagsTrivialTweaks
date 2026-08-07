@@ -44,8 +44,8 @@ local L = app.locales
 -- L.SETTINGS_CURSORGUIDE_DESC =            "Show a guide around the cursor to help you keep track of it."
 -- L.SETTINGS_CURSORGUIDE_COMBAT_TITLE =    "Only In Combat"
 -- L.SETTINGS_CURSORGUIDE_COMBAT_DESC =     "Only show the cursor guide in combat."
--- L.SETTINGS_SKIPCINEMATICS_TITLE =        "[WIP] Skip Seen Cinematics"
--- L.SETTINGS_SKIPCINEMATICS_TITLE_DESC =   "Automatically skip before-seen cinematics. This feature needs more testing and may (not) skip cinematics as expected."
+-- L.SETTINGS_SKIPCINEMATICS_TITLE =        "Skip Seen Cinematics"
+-- L.SETTINGS_SKIPCINEMATICS_TITLE_DESC =   "Automatically skip before-seen cinematics."
 
 -- L.INVENTORY =                            INVENTORY_TOOLTIP -- "Inventory"
 -- L.SETTINGS_COMPARE_TITLE =               "Disable Always Compare"
