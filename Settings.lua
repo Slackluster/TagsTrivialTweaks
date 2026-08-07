@@ -258,6 +258,8 @@ function app:CreateSettings()
 
 	checkbox("cursorGuideCombat", L.SETTINGS_CURSORGUIDE_COMBAT_TITLE, L.SETTINGS_CURSORGUIDE_COMBAT_DESC, true, function() app:SetCursorGuideVisibility() end, parentSetting, parentCheckbox)
 
+	checkbox("skipSeenCinematics", L.SETTINGS_SKIPCINEMATICS_TITLE, L.SETTINGS_SKIPCINEMATICS_TITLE_DESC, false)
+
 	header(L.INVENTORY)
 
 	checkbox("disableAlwaysCompare", L.SETTINGS_COMPARE_TITLE, L.SETTINGS_COMPARE_DESC, true, function() app:ToggleAlwaysCompare() end)

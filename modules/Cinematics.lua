@@ -17,14 +17,14 @@ app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 end)
 
 --------------------------
--- SKIP CEEN CINEMATICS --
+-- SKIP SEEN CINEMATICS --
 --------------------------
 
 function app:SkipSeenCinematics()
 	local function handleCinematic(key)
 		if not app.Settings.cinematics[key] then
 			app.Settings.cinematics[key] = true
-		else
+		elseif app.Settings["skipSeenCinematics"] then
 			MovieFrame:Hide()
 			StopCinematic()
 			CancelScene()
