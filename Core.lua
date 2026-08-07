@@ -132,8 +132,8 @@ end
 -- HELPER FUNCTIONS --
 ----------------------
 
-function app:Colour(string)
-	return "|cff3FC7EB" .. string .. "|r"
+function app:Colour(string, colour)
+	return "|cff" .. (colour or "3FC7EB") .. string .. "|r"
 end
 
 function app:Debug(...)
