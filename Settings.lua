@@ -258,9 +258,15 @@ function app:CreateSettings()
 
 	checkbox("cursorGuideCombat", L.SETTINGS_CURSORGUIDE_COMBAT_TITLE, L.SETTINGS_CURSORGUIDE_COMBAT_DESC, true, function() app:SetCursorGuideVisibility() end, parentSetting, parentCheckbox)
 
+	header(L.INVENTORY)
+
 	checkbox("disableAlwaysCompare", L.SETTINGS_COMPARE_TITLE, L.SETTINGS_COMPARE_DESC, true, function() app:ToggleAlwaysCompare() end)
 
+	checkbox("showTokenPrice", L.SETTINGS_SHOWTOKENPRICE_TITLE, L.SETTINGS_SHOWTOKENPRICE_DESC, true)
+
 	checkbox("backpackCount", L.SETTINGS_SPLITBAG_TITLE, L.SETTINGS_SPLITBAG_DESC, true, function() app:SplitBackpackCount() end)
+
+	header(L.LOOT)
 
 	local parentSetting, parentCheckbox = checkbox("instantCatalyst", L.SETTINGS_CATALYST, L.SETTINGS_CATALYST_DESC, true)
 
@@ -281,8 +287,6 @@ function app:CreateSettings()
 	checkbox("readyCheckSound", L.SETTINGS_READYCHECKSOUND_TITLE, L.SETTINGS_READYCHECKSOUND_DESC, false)
 
 	checkbox("countdownSound", L.SETTINGS_COUNTDOWNSOUND_TITLE, L.SETTINGS_COUNTDOWNSOUND_DESC, false)
-
-	checkbox("showTokenPrice", L.SETTINGS_SHOWTOKENPRICE_TITLE, L.SETTINGS_SHOWTOKENPRICE_DESC, true)
 
 	checkbox("tokyoDrift", L.SETTINGS_TOKYODRIFT_TITLE, L.SETTINGS_TOKYODRIFT_DESC, false)
 

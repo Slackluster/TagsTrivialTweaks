@@ -42,10 +42,14 @@ L.SETTINGS_CURSORGUIDE_TITLE =           "Направляющая курсор�
 L.SETTINGS_CURSORGUIDE_DESC =            "Чтобы вам было легче следить за курсором, отобразите вокруг него направляющую."
 L.SETTINGS_CURSORGUIDE_COMBAT_TITLE =    "Только в бою"
 L.SETTINGS_CURSORGUIDE_COMBAT_DESC =     "Отображайте курсор только в бою."
+
+-- L.INVENTORY =                            INVENTORY_TOOLTIP -- "Inventory"
 L.SETTINGS_COMPARE_TITLE =               "Отключить постоянное сравнение"
 L.SETTINGS_COMPARE_DESC =                "Отключить поведение постоянного сравнения предметов, добавленное в патче 11.2.7."
 L.SETTINGS_SPLITBAG_TITLE =              "Разделение количества мешков с реагентами"
 L.SETTINGS_SPLITBAG_DESC =               "Показывает свободные слоты ваших обычных сумок и сумки с реагентами отдельно над значком рюкзака."
+
+-- L.LOOT =                                 LOOT -- "Loot"
 L.SETTINGS_CATALYST =                    "Мгновенная катализация"
 L.SETTINGS_CATALYST_DESC =               "Удерживайте Shift, чтобы мгновенно катализировать предмет, пропуская 5-секундный таймер."
 L.SETTINGS_VAULT =                       "Мгновенное Великое Хранилище"
