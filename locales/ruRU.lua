@@ -13,8 +13,8 @@ L.REQUIRES_RELOAD =                      "|cffFF0000" .. REQUIRES_RELOAD .. ".|r
 
 -- Slash commands
 L.INVALID_COMMAND =                      "Неверная команда."
--- L.DEBUG_ENABLED =                        "Debug mode enabled."
--- L.DEBUG_DISABLED =                       "Debug mode disabled."
+L.DEBUG_ENABLED =                        "Режим отладки включен."
+L.DEBUG_DISABLED =                       "Режим отладки выключен."
 
 -- Version comms
 L.NEW_VERSION_AVAILABLE =                "Доступна более новая версия " .. app.NameLong .. " аддона:"
@@ -44,8 +44,8 @@ L.SETTINGS_CURSORGUIDE_TITLE =           "Направляющая курсор�
 L.SETTINGS_CURSORGUIDE_DESC =            "Чтобы вам было легче следить за курсором, отобразите вокруг него направляющую."
 L.SETTINGS_CURSORGUIDE_COMBAT_TITLE =    "Только в бою"
 L.SETTINGS_CURSORGUIDE_COMBAT_DESC =     "Отображайте курсор только в бою."
--- L.SETTINGS_SKIPCINEMATICS_TITLE =        "Skip Seen Cinematics"
--- L.SETTINGS_SKIPCINEMATICS_TITLE_DESC =   "Automatically skip before-seen cinematics."
+L.SETTINGS_SKIPCINEMATICS_TITLE =        "Пропуск просмотренных роликов"
+L.SETTINGS_SKIPCINEMATICS_TITLE_DESC =   "Автоматически пропускать внутриигровые ролики, которые вы уже видели."
 
 -- L.INVENTORY =                            INVENTORY_TOOLTIP -- "Inventory"
 L.SETTINGS_COMPARE_TITLE =               "Отключить постоянное сравнение"
@@ -68,10 +68,10 @@ L.SETTINGS_HIDE_LOOT_ROLL_WINDOW =       "Скрыть окно бросков �
 L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC =  "Скрыть окно, показывающее броски лута и их результаты. Вы можете снова показать окно с помощью |cff00ccff/loot|r."
 L.SETTINGS_QUEUESOUND_TITLE =            "Воспроизвести звук очереди"
 L.SETTINGS_QUEUESOUND_DESC =             "Воспроизводить звук готовности очереди на главном канале, когда срабатывает любая очередь, включая поля боя и битвы питомцев."
--- L.SETTINGS_READYCHECKSOUND_TITLE =       "Play Ready Check Sound"
--- L.SETTINGS_READYCHECKSOUND_DESC =        "Play the ready check sound on the Master channel when a ready check is initiated."
--- L.SETTINGS_COUNTDOWNSOUND_TITLE =        "Play Countdown Sound"
--- L.SETTINGS_COUNTDOWNSOUND_DESC =         "Play the countdown sound on the Master channel when any countdown / pull timer is initiated."
+L.SETTINGS_READYCHECKSOUND_TITLE =       "Звук проверки готовности"
+L.SETTINGS_READYCHECKSOUND_DESC =        "Воспроизводить звук проверки готовности на главном звуковом канале, когда она запускается."
+L.SETTINGS_COUNTDOWNSOUND_TITLE =        "Звук отсчета времени"
+L.SETTINGS_COUNTDOWNSOUND_DESC =         "Воспроизводить звук отсчета времени на главном звуковом канале, когда запускается таймер до пулла или любой другой отсчет."
 L.SETTINGS_SHOWTOKENPRICE_TITLE =        "Показать цену жетона WoW"
 L.SETTINGS_SHOWTOKENPRICE_DESC =         "Отображать текущую цену жетона WoW в подсказке к предмету Жетон WoW."
 L.SETTINGS_TOKYODRIFT_TITLE =            "Токийский Дрифт"
