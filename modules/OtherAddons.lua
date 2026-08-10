@@ -94,10 +94,10 @@ function app:FixUnderminePrices()
 
 					tooltip:AddLine(" ")
 					if marketPrice > 0 then
-						tooltip:AddDoubleLine(GetNormalizedRealmName(),GetMoneyString(marketPrice, true))
+						tooltip:AddDoubleLine(GetNormalizedRealmName(), GetMoneyString(marketPrice, true))
 					end
 					if regionPrice > 0 then
-						tooltip:AddDoubleLine(GetCurrentRegionName() .. " " .. L.REGION,GetMoneyString(regionPrice, true))
+						tooltip:AddDoubleLine(GetCurrentRegionName() .. " " .. L.REGION, GetMoneyString(regionPrice, true))
 					end
 				end
 			end

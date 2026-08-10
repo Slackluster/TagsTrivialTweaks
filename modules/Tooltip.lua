@@ -38,7 +38,7 @@ function app:ShowTokenPrice()
 
 			if itemID == 122270 and C_WowTokenPublic.GetCurrentMarketPrice() then
 				tooltip:AddLine(" ")
-				tooltip:AddDoubleLine(TOKEN_CURRENT_MARKET_PRICE, GetMoneyString(C_WowTokenPublic.GetCurrentMarketPrice()))
+				tooltip:AddDoubleLine(TOKEN_CURRENT_MARKET_PRICE, GetMoneyString(C_WowTokenPublic.GetCurrentMarketPrice(), true))
 			end
 		end
 	end
