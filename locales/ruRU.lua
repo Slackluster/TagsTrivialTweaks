@@ -20,7 +20,7 @@ L.DEBUG_DISABLED =                       "Режим отладки выключ
 L.NEW_VERSION_AVAILABLE =                "Доступна более новая версия " .. app.NameLong .. " аддона:"
 
 -- UI
-L.REGION =                               "Регион" -- Preceded by an abbreviated region name such as "EU" or "US"
+L.REGION =                               "%s Регион" -- %s becomes an abbreviated region name such as "EU" or "US"
 L.INSTANT_BUTTON =                       "Получить сейчас!"
 L.INSTANT_TOOLTIP =                      "Удерживайте Shift, чтобы мгновенно получить предмет, пропуская 5-секундный таймер."
 

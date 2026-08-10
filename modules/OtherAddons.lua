@@ -61,7 +61,7 @@ function app:ShowRecentAHPrice()
 					tooltip:AddDoubleLine(GetNormalizedRealmName(), GetMoneyString(realmPrice, true))
 				end
 				if regionPrice > 0 then
-					tooltip:AddDoubleLine(GetCurrentRegionName() .. " " .. L.REGION, GetMoneyString(regionPrice, true))
+					tooltip:AddDoubleLine(string.format(L.REGION, GetCurrentRegionName()), GetMoneyString(regionPrice, true))
 				end
 			end
 		end
@@ -82,7 +82,7 @@ hooksecurefunc("BattlePetToolTip_Show", function(...)
 				LibBattlePetTooltipLine:AddDoubleLine(BattlePetTooltip, GetNormalizedRealmName(), GetMoneyString(realmPrice, true))
 			end
 			if regionPrice > 0 then
-				LibBattlePetTooltipLine:AddDoubleLine(BattlePetTooltip, GetCurrentRegionName() .. " " .. L.REGION, GetMoneyString(regionPrice, true))
+				LibBattlePetTooltipLine:AddDoubleLine(BattlePetTooltip, string.format(L.REGION, GetCurrentRegionName()), GetMoneyString(regionPrice, true))
 			end
 		end
 	end

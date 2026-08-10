@@ -20,7 +20,7 @@ local L = app.locales
 -- L.NEW_VERSION_AVAILABLE =                "There is a newer version of " .. app.NameLong .. " available:"
 
 -- UI
--- L.REGION =                               "Region" -- Preceded by an abbreviated region name such as "EU" or "US"
+-- L.REGION =                               "%s Region" -- %s becomes an abbreviated region name such as "EU" or "US"
 -- L.INSTANT_BUTTON =                       "Get it now!"
 -- L.INSTANT_TOOLTIP =                      "Hold Shift to instantly receive your item and skip the 5 second timer."
 
