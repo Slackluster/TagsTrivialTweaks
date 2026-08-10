@@ -80,8 +80,8 @@ L.SETTINGS_URL_COPIED =                  "Enlace copiado al portapapeles"
 -- L.ADDONS =                               "Addons"
 -- L.SETTINGS_HANDYNOTESFIX_TITLE =         "Disable HandyNotes Alt " .. app.IconRMB
 -- L.SETTINGS_HANDYNOTESFIX_DESC =          "Disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.\n\n" .. L.REQUIRES_RELOAD
--- L.SETTINGS_AHPRICETOOLTIP_TITLE =        "Auction House Price Tooltip"
--- L.SETTINGS_AHPRICETOOLTIP_DESC =         "Show the most recent pricing information from Auctionator, Oribos Exchange, or TradeSkillMaster as a single value.\n" ..
+-- L.SETTINGS_AHPRICETOOLTIP_TITLE =        "AH Price Tooltip"
+-- L.SETTINGS_AHPRICETOOLTIP_DESC =         "Show the most recent pricing information from either Auctionator, Oribos Exchange, or TradeSkillMaster.\n" ..
 --                                          "Also rounds the value and fixes profession window, recipe, and pet prices."
 
 -- L.HOLIDAYS =                             CALENDAR_FILTER_HOLIDAYS -- "Holidays"

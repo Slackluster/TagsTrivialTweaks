@@ -18,8 +18,8 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
 - Play Countdown Sound: Play the countdown sound on the Master channel when any countdown / pull timer is initiated.
 - Show WoW Token Price: Show the current WoW Token price on the WoW Token item tooltip.
 - Tokyo Drift: Vroom vroom.
-- Disable HandyNotes Alt+RMB: Let STS disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
-- Fix Oribos Exchange Tooltip: Let STS simplify and fix the tooltip provided by the Oribos Exchange addon.
+- Disable HandyNotes Alt+RMB: Disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
+- AH Price Tooltip: Show the most recent pricing information from either Auctionator, Oribos Exchange, or TradeSkillMaster
 - [Hallow's End] No Trick: Sit down before completing a Candy Bucket quest, preventing getting tricked and pacified.
 - Adds your current realm name to the character panel.
 

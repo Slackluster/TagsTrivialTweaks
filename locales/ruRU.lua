@@ -80,8 +80,8 @@ L.SETTINGS_TOKYODRIFT_DESC =             "Врум врум."
 L.ADDONS =                               "Аддоны"
 L.SETTINGS_HANDYNOTESFIX_TITLE =         "Отключить HandyNotes Alt " .. app.IconRMB
 L.SETTINGS_HANDYNOTESFIX_DESC =          "Отключить привязку клавиш HandyNotes на карте, вместо этого включив ее для точек маршрута TomTom.\n\n" .. L.REQUIRES_RELOAD
--- L.SETTINGS_AHPRICETOOLTIP_TITLE =        "Auction House Price Tooltip"
--- L.SETTINGS_AHPRICETOOLTIP_DESC =         "Show the most recent pricing information from Auctionator, Oribos Exchange, or TradeSkillMaster as a single value.\n" ..
+-- L.SETTINGS_AHPRICETOOLTIP_TITLE =        "AH Price Tooltip"
+-- L.SETTINGS_AHPRICETOOLTIP_DESC =         "Show the most recent pricing information from either Auctionator, Oribos Exchange, or TradeSkillMaster.\n" ..
 --                                          "Also rounds the value and fixes profession window, recipe, and pet prices."
 
 L.HOLIDAYS =                             CALENDAR_FILTER_HOLIDAYS -- "Holidays"
