@@ -52,7 +52,9 @@ function app:ShowRecentAHPrice()
 	local function OnTooltipSetItem(tooltip, itemData)
 		if app.Settings["ahPriceTooltip"] and app.Flag.IsAuctionAddonLoaded then
 			local itemID = app:GetTooltipItem(tooltip, itemData)
-			if not itemID or select(14, C_Item.GetItemInfo(itemID)) == 1 then return end
+			if not itemID then return end
+			local bindType = select(14, C_Item.GetItemInfo(itemID))
+			if bindType == Enum.ItemBind.OnAcquire or bindType == Enum.ItemBind.ToWoWAccount or bindType == Enum.ItemBind.ToBnetAccount or bindType == Enum.ItemBind.ToBnetAccountUntilEquipped then return end
 
 			local realmPrice, regionPrice = app:RoundedItemValue(itemID)
 			if realmPrice + regionPrice > 0 then

@@ -23,18 +23,8 @@ end)
 function app:ShowTokenPrice()
 	local function OnTooltipSetItem(tooltip, itemData)
 		if app.Settings["showTokenPrice"] then
-
-			local _, itemLink, itemID
-			if itemData and itemData.id then
-				itemID = itemData.id
-				itemLink = C_Item.GetItemInfo(itemID)
-			elseif tooltip.GetItem then
-				_, itemLink, itemID = tooltip:GetItem()
-			else
-				_, itemLink, itemID = TooltipUtil.GetDisplayedItem(GameTooltip)
-			end
-
-			if not itemLink and itemID then return end
+			local itemID = app:GetTooltipItem(tooltip, itemData)
+			if not itemID then return end
 
 			if itemID == 122270 and C_WowTokenPublic.GetCurrentMarketPrice() then
 				tooltip:AddLine(" ")
