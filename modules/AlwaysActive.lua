@@ -11,7 +11,7 @@ local L = app.locales
 ----------------
 
 function app:UpdateCharacterFrameTitle()
-	if CharacterFrame and CharacterFrame:IsShown() and CharacterFrameTitleText then
+	if CharacterFrame and CharacterFrame:IsVisible() and CharacterFrameTitleText then
 		RunNextFrame(function()
 			local realm = GetNormalizedRealmName()
 			local titleText = CharacterFrameTitleText:GetText()

@@ -55,7 +55,7 @@ end)
 -------------------------
 
 app.Event:Register("WEEKLY_REWARDS_UPDATE", function()
-	if not TransmogLootHelper_Settings["instantVault"] and app.Settings["instantVault"] and WeeklyRewardsFrame and WeeklyRewardsFrame:IsShown() then
+	if not TransmogLootHelper_Settings["instantVault"] and app.Settings["instantVault"] and WeeklyRewardsFrame and WeeklyRewardsFrame:IsVisible() then
 		WeeklyRewardsFrame.SelectRewardButton:HookScript("OnClick", function()
 			if IsShiftKeyDown() then
 				StaticPopupDialogs["CONFIRM_SELECT_WEEKLY_REWARD"].OnAccept(StaticPopup1, StaticPopup1.data)
