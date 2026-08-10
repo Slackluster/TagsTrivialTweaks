@@ -296,7 +296,7 @@ function app:CreateSettings()
 
 	checkbox("handyNotes", L.SETTINGS_HANDYNOTESFIX_TITLE, L.SETTINGS_HANDYNOTESFIX_DESC, true)
 
-	checkbox("underminePrices", L.SETTINGS_ORIBOSEXCHANGEFIX_TITLE, L.SETTINGS_ORIBOSEXCHANGEFIX_DESC, true, function() app:HideOribosMessage() end)
+	checkbox("ahPriceTooltip", L.SETTINGS_AHPRICETOOLTIP_TITLE .. app.IconNew, L.SETTINGS_AHPRICETOOLTIP_DESC, true, function() app:HideOribosMessage() end)
 
 	header(L.HOLIDAYS)
 

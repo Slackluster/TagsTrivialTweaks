@@ -79,13 +79,10 @@ L.SETTINGS_URL_COPIED =                  "Enlace copiado al portapapeles"
 
 -- L.ADDONS =                               "Addons"
 -- L.SETTINGS_HANDYNOTESFIX_TITLE =         "Disable HandyNotes Alt " .. app.IconRMB
--- L.SETTINGS_HANDYNOTESFIX_DESC =          "Let " .. app.NameShort .. " disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.\n\n" .. L.REQUIRES_RELOAD
--- L.SETTINGS_ORIBOSEXCHANGEFIX_TITLE =     "Fix Oribos Exchange Tooltip"
--- L.SETTINGS_ORIBOSEXCHANGEFIX_DESC =      "Let " .. app.NameShort .. " simplify and fix the tooltip provided by the Oribos Exchange addon:\n" ..
---                                          "- Round to the nearest gold.\n" ..
---                                          "- Fix recipe prices.\n" ..
---                                          "- Fix profession window prices.\n" ..
---                                          "- Show battle pet prices inside the existing tooltip."
+-- L.SETTINGS_HANDYNOTESFIX_DESC =          "Disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.\n\n" .. L.REQUIRES_RELOAD
+-- L.SETTINGS_AHPRICETOOLTIP_TITLE =        "Auction House Price Tooltip"
+-- L.SETTINGS_AHPRICETOOLTIP_DESC =         "Show the most recent pricing information from Auctionator, Oribos Exchange, or TradeSkillMaster as a single value.\n" ..
+--                                          "Also rounds the value and fixes profession window, recipe, and pet prices."
 
 -- L.HOLIDAYS =                             CALENDAR_FILTER_HOLIDAYS -- "Holidays"
 -- L.SETTINGS_HALLOWSIT_TITLE =             "[Hallow's End] No Trick"
