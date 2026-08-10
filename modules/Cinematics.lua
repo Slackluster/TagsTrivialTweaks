@@ -24,10 +24,12 @@ function app:SkipSeenCinematics()
 	local function handleCinematic(key)
 		if not app.Settings.cinematics[key] then
 			app.Settings.cinematics[key] = true
+			app:Debug("Registering cinematic", key)
 		elseif app.Settings["skipSeenCinematics"] then
 			MovieFrame:Hide()
 			StopCinematic()
 			CancelScene()
+			app:Debug("Canceling cinematic", key)
 		end
 	end
 
