@@ -148,3 +148,7 @@ app.Event:Register("BANKFRAME_OPENED", function()
 		app:CheckItemsForCommodityStatus()
 	end)
 end)
+
+app.Event:Register("TRADE_SKILL_SHOW", function()
+	app:CheckItemsForCommodityStatus()
+end)
