@@ -194,6 +194,13 @@ function app:RoundedItemValue(itemID, itemLink, speciesID)
 		end
 	end
 
+	if SlackersTweakSuite_Cache.Commodities and SlackersTweakSuite_Cache.Commodities[itemID] then
+		for _, value in ipairs(realmPrice) do
+			table.insert(regionPrice, value)
+		end
+		realmPrice = {}
+	end
+
 	table.sort(realmPrice, function(a, b) return a.age < b.age end)
 	table.sort(regionPrice, function(a, b) return a.age < b.age end)
 	local function getPrice(table)

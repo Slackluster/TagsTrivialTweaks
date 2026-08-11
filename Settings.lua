@@ -12,6 +12,7 @@ local L = app.locales
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
+		SlackersTweakSuite_Cache = SlackersTweakSuite_Cache or {}
 		SlackersTweakSuite_Settings = SlackersTweakSuite_Settings or {}
 		app.Settings = SlackersTweakSuite_Settings
 

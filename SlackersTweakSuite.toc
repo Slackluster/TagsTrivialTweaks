@@ -7,7 +7,7 @@
 ## X-Curse-Project-ID: 1362599
 ## X-Wago-ID: x61zryK1
 
-## SavedVariables: SlackersTweakSuite_Settings
+## SavedVariables: SlackersTweakSuite_Settings, SlackersTweakSuite_Cache
 ## SavedVariablesPerCharacter:
 
 ## Category: User Interface

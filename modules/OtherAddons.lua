@@ -77,7 +77,7 @@ hooksecurefunc("BattlePetToolTip_Show", function(...)
 		local speciesID, level, breedQuality, maxHealth, power, speed, bracketName = ...
 		local itemLink = "|cff0070dd|Hbattlepet:" .. speciesID .. ":" .. level .. ":" .. breedQuality .. ":" .. maxHealth .. ":" .. power .. ":" .. speed .. "|h" .. bracketName .. "|h|r"
 
-		local realmPrice, regionPrice = app:RoundedItemValue(_, itemLink, speciesID)
+		local realmPrice, regionPrice = app:RoundedItemValue(nil, itemLink, speciesID)
 		if realmPrice + regionPrice > 0 then
 			LibBattlePetTooltipLine:AddDoubleLine(BattlePetTooltip, " ", " ")
 			if realmPrice > 0 then
@@ -119,3 +119,32 @@ function app:HideOribosMessage()
 		end
 	end
 end
+
+function app:CheckItemsForCommodityStatus()
+	for bag = -4, 16 do
+		local slots = C_Container.GetContainerNumSlots(bag)
+		if slots and slots > 0 then
+			for bagSlot = 1, slots do
+				local itemLocation = ItemLocation:CreateFromBagAndSlot(bag, bagSlot)
+				if itemLocation and C_Item.DoesItemExist(itemLocation) then
+					local commodityStatus = C_AuctionHouse.GetItemCommodityStatus(itemLocation)
+					if commodityStatus == Enum.ItemCommodityStatus.Commodity then
+						SlackersTweakSuite_Cache.Commodities = SlackersTweakSuite_Cache.Commodities or {}
+						local itemID = C_Item.GetItemID(itemLocation)
+						SlackersTweakSuite_Cache.Commodities[itemID] = true
+					end
+				end
+			end
+		end
+	end
+end
+
+app.Event:Register("BAG_UPDATE_DELAYED", function()
+	app:CheckItemsForCommodityStatus()
+end)
+
+app.Event:Register("BANKFRAME_OPENED", function()
+	C_Timer.After(5, function()
+		app:CheckItemsForCommodityStatus()
+	end)
+end)
