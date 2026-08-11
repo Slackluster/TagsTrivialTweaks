@@ -139,12 +139,12 @@ function app:CheckItemsForCommodityStatus()
 	end
 end
 
-app.Event:Register("BAG_UPDATE_DELAYED", function()
+app.Event:Register("AUCTION_HOUSE_SHOW", function()
 	app:CheckItemsForCommodityStatus()
 end)
 
 app.Event:Register("BANKFRAME_OPENED", function()
-	C_Timer.After(5, function()
+	C_Timer.After(2, function()
 		app:CheckItemsForCommodityStatus()
 	end)
 end)
