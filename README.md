@@ -23,7 +23,6 @@ A World of Warcraft addon. Download locations: [CurseForge](https://www.cursefor
   - Play Queue Sound: Play the queue sound on the Master channel when any queue pops, including battlegrounds and pet battles.
   - Play Ready Check Sound: Play the ready check sound on the Master channel when a ready check is initiated.
   - Play Countdown Sound: Play the countdown sound on the Master channel when any countdown / pull timer is initiated.
-  - Tokyo Drift: Vroom vroom.
 - Addons
   - Disable HandyNotes Alt+RMB: Disable HandyNotes' keybind on the map, re-enabling it for TomTom waypoints instead.
   - AH Price Tooltip: Show the most recent pricing information from either Auctionator, Oribos Exchange, or TradeSkillMaster

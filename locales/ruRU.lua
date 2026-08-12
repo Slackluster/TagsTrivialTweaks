@@ -74,8 +74,6 @@ L.SETTINGS_COUNTDOWNSOUND_TITLE =        "Звук отсчета времени
 L.SETTINGS_COUNTDOWNSOUND_DESC =         "Воспроизводить звук отсчета времени на главном звуковом канале, когда запускается таймер до пулла или любой другой отсчет."
 L.SETTINGS_SHOWTOKENPRICE_TITLE =        "Показать цену жетона WoW"
 L.SETTINGS_SHOWTOKENPRICE_DESC =         "Отображать текущую цену жетона WoW в подсказке к предмету Жетон WoW."
-L.SETTINGS_TOKYODRIFT_TITLE =            "Токийский Дрифт"
-L.SETTINGS_TOKYODRIFT_DESC =             "Врум врум."
 
 L.ADDONS =                               "Аддоны"
 L.SETTINGS_HANDYNOTESFIX_TITLE =         "Отключить HandyNotes Alt " .. app.IconRMB

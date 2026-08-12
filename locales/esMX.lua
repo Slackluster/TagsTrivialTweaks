@@ -74,8 +74,6 @@ L.SETTINGS_URL_COPIED =                  "Enlace copiado al portapapeles"
 -- L.SETTINGS_COUNTDOWNSOUND_DESC =         "Play the countdown sound on the Master channel when any countdown / pull timer is initiated."
 -- L.SETTINGS_SHOWTOKENPRICE_TITLE =        "Show WoW Token Price"
 -- L.SETTINGS_SHOWTOKENPRICE_DESC =         "Show the current WoW Token price on the WoW Token item tooltip."
--- L.SETTINGS_TOKYODRIFT_TITLE =            "Tokyo Drift"
--- L.SETTINGS_TOKYODRIFT_DESC =             "Vroom vroom."
 
 -- L.ADDONS =                               "Addons"
 -- L.SETTINGS_HANDYNOTESFIX_TITLE =         "Disable HandyNotes Alt " .. app.IconRMB

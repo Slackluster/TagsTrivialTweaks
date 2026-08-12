@@ -291,8 +291,6 @@ function app:CreateSettings()
 
 	checkbox("countdownSound", L.SETTINGS_COUNTDOWNSOUND_TITLE .. app.IconNew, L.SETTINGS_COUNTDOWNSOUND_DESC, false)
 
-	checkbox("tokyoDrift", L.SETTINGS_TOKYODRIFT_TITLE, L.SETTINGS_TOKYODRIFT_DESC, false)
-
 	header(L.ADDONS)
 
 	checkbox("handyNotes", L.SETTINGS_HANDYNOTESFIX_TITLE, L.SETTINGS_HANDYNOTESFIX_DESC, true)
