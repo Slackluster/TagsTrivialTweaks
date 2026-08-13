@@ -47,13 +47,13 @@ L.SETTINGS_CURSORGUIDE_COMBAT_DESC =     "Отображайте курсор т
 L.SETTINGS_SKIPCINEMATICS_TITLE =        "Пропуск просмотренных роликов"
 L.SETTINGS_SKIPCINEMATICS_TITLE_DESC =   "Автоматически пропускать внутриигровые ролики, которые вы уже видели."
 
--- L.INVENTORY =                            INVENTORY_TOOLTIP -- "Inventory"
+L.INVENTORY =                            INVENTORY_TOOLTIP -- "Inventory"
 L.SETTINGS_COMPARE_TITLE =               "Отключить постоянное сравнение"
 L.SETTINGS_COMPARE_DESC =                "Отключить поведение постоянного сравнения предметов, добавленное в патче 11.2.7."
 L.SETTINGS_SPLITBAG_TITLE =              "Разделение количества мешков с реагентами"
 L.SETTINGS_SPLITBAG_DESC =               "Показывает свободные слоты ваших обычных сумок и сумки с реагентами отдельно над значком рюкзака."
 
--- L.LOOT =                                 LOOT -- "Loot"
+L.LOOT =                                 LOOT -- "Loot"
 L.SETTINGS_CATALYST =                    "Мгновенная катализация"
 L.SETTINGS_CATALYST_DESC =               "Удерживайте Shift, чтобы мгновенно катализировать предмет, пропуская 5-секундный таймер."
 L.SETTINGS_VAULT =                       "Мгновенное Великое Хранилище"
@@ -63,7 +63,7 @@ L.SETTINGS_INSTANT_TOOLTIP_DESC =        "Показывать подсказк�
 L.SETTINGS_VENDOR_ALL =                  "Отключить фильтр торговца"
 L.SETTINGS_VENDOR_ALL_DESC =             "Автоматически устанавливать все фильтры торговца на |cffFFFFFFВсе|r, чтобы отображать предметы, обычно не показываемые для вашего класса."
 
--- L.SOUND =                                SOUND -- "Sound"
+L.SOUND =                                SOUND -- "Sound"
 L.SETTINGS_HIDE_LOOT_ROLL_WINDOW =       "Скрыть окно бросков лута"
 L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC =  "Скрыть окно, показывающее броски лута и их результаты. Вы можете снова показать окно с помощью |cff00ccff/loot|r."
 L.SETTINGS_QUEUESOUND_TITLE =            "Воспроизвести звук очереди"
@@ -78,9 +78,9 @@ L.SETTINGS_SHOWTOKENPRICE_DESC =         "Отображать текущую ц
 L.ADDONS =                               "Аддоны"
 L.SETTINGS_HANDYNOTESFIX_TITLE =         "Отключить HandyNotes Alt " .. app.IconRMB
 L.SETTINGS_HANDYNOTESFIX_DESC =          "Отключить привязку клавиш HandyNotes на карте, вместо этого включив ее для точек маршрута TomTom.\n\n" .. L.REQUIRES_RELOAD
--- L.SETTINGS_AHPRICETOOLTIP_TITLE =        "AH Price Tooltip"
--- L.SETTINGS_AHPRICETOOLTIP_DESC =         "Show the most recent pricing information from either Auctionator, Oribos Exchange, or TradeSkillMaster.\n" ..
---                                          "Also rounds the value and fixes profession window, recipe, and pet prices."
+L.SETTINGS_AHPRICETOOLTIP_TITLE =        "Подсказка с ценой аукциона"
+L.SETTINGS_AHPRICETOOLTIP_DESC =         "Показывать самую свежую информацию о ценах из Auctionator, Oribos Exchange или TradeSkillMaster.\n" ..
+                                          "Также округляет значения и исправляет отображение цен в окне профессий, рецептах и ценах на питомцев."
 
 L.HOLIDAYS =                             CALENDAR_FILTER_HOLIDAYS -- "Holidays"
 L.SETTINGS_HALLOWSIT_TITLE =             "[Тыквовин] Без уловок"
