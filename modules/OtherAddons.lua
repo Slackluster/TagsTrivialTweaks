@@ -12,6 +12,8 @@ local L = app.locales
 
 app.Event:Register("ADDON_LOADED", function(addOnName, containsBindings)
 	if addOnName == appName then
+		SlackersTweakSuite_Cache.Commodities = SlackersTweakSuite_Cache.Commodities or {}
+
 		app:DisableHandyNotesAltRMB()
 		app:ShowRecentAHPrice()
 		app:HideOribosMessage()
@@ -120,18 +122,21 @@ function app:HideOribosMessage()
 	end
 end
 
-function app:CheckItemsForCommodityStatus()
-	for bag = -4, 16 do
-		local slots = C_Container.GetContainerNumSlots(bag)
-		if slots and slots > 0 then
-			for bagSlot = 1, slots do
-				local itemLocation = ItemLocation:CreateFromBagAndSlot(bag, bagSlot)
-				if itemLocation and C_Item.DoesItemExist(itemLocation) then
-					local commodityStatus = C_AuctionHouse.GetItemCommodityStatus(itemLocation)
-					if commodityStatus == Enum.ItemCommodityStatus.Commodity then
-						SlackersTweakSuite_Cache.Commodities = SlackersTweakSuite_Cache.Commodities or {}
-						local itemID = C_Item.GetItemID(itemLocation)
-						SlackersTweakSuite_Cache.Commodities[itemID] = true
+function app:MarkItemAsCommodity(commodityItemID)
+	if commodityItemID then
+		SlackersTweakSuite_Cache.Commodities[commodityItemID] = true
+	else
+		for bag = -4, 16 do
+			local slots = C_Container.GetContainerNumSlots(bag)
+			if slots and slots > 0 then
+				for bagSlot = 1, slots do
+					local itemLocation = ItemLocation:CreateFromBagAndSlot(bag, bagSlot)
+					if itemLocation and C_Item.DoesItemExist(itemLocation) then
+						local commodityStatus = C_AuctionHouse.GetItemCommodityStatus(itemLocation)
+						if commodityStatus == Enum.ItemCommodityStatus.Commodity then
+							local itemID = C_Item.GetItemID(itemLocation)
+							SlackersTweakSuite_Cache.Commodities[itemID] = true
+						end
 					end
 				end
 			end
@@ -139,16 +144,24 @@ function app:CheckItemsForCommodityStatus()
 	end
 end
 
-app.Event:Register("AUCTION_HOUSE_SHOW", function()
-	app:CheckItemsForCommodityStatus()
+app.Event:Register("COMMODITY_PURCHASED", function(itemID, quantity)
+	app:MarkItemAsCommodity(itemID)
+end)
+
+app.Event:Register("COMMODITY_SEARCH_RESULTS_ADDED", function(itemID)
+	app:MarkItemAsCommodity(itemID)
+end)
+
+app.Event:Register("COMMODITY_SEARCH_RESULTS_UPDATED", function(itemID)
+	app:MarkItemAsCommodity(itemID)
 end)
 
 app.Event:Register("BANKFRAME_OPENED", function()
 	C_Timer.After(2, function()
-		app:CheckItemsForCommodityStatus()
+		app:MarkItemAsCommodity()
 	end)
 end)
 
 app.Event:Register("TRADE_SKILL_SHOW", function()
-	app:CheckItemsForCommodityStatus()
+	app:MarkItemAsCommodity()
 end)
