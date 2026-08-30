@@ -36,6 +36,7 @@ modules\Cursor.lua
 modules\CVars.lua
 modules\Holidays.lua
 modules\Loot.lua
+modules\Merchant.lua
 modules\OtherAddons.lua
 modules\Sounds.lua
 modules\Tooltip.lua

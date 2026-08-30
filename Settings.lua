@@ -279,9 +279,11 @@ function app:CreateSettings()
 
 	checkbox("instantVaultTooltip", L.SETTINGS_INSTANT_TOOLTIP,L.SETTINGS_INSTANT_TOOLTIP_DESC, true, nil, parentSetting, parentCheckbox)
 
+	checkbox("hideGroupRolls", L.SETTINGS_HIDE_LOOT_ROLL_WINDOW, L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC, false)
+
 	checkbox("vendorAll", L.SETTINGS_VENDOR_ALL, L.SETTINGS_VENDOR_ALL_DESC, true)
 
-	checkbox("hideGroupRolls", L.SETTINGS_HIDE_LOOT_ROLL_WINDOW, L.SETTINGS_HIDE_LOOT_ROLL_WINDOW_DESC, false)
+	checkbox("disableMerchantCompare", L.SETTINGS_MERCHANT_COMPARE .. app.IconNew, L.SETTINGS_MERCHANT_COMPARE_DESC, true)
 
 	header(L.SOUND)
 
